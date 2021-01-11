@@ -1,0 +1,45 @@
+Started GET "/" for ::1 at 2021-01-11 11:01:28 -0500
+  [1m[35m (2.9ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Started GET "/" for ::1 at 2021-01-11 11:01:28 -0500
+Processing by Rails::WelcomeController#index as HTML
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/jason/.rvm/rubies/ruby-2.6.5/lib/ruby/gems/2.6.0/gems/railties-6.0.3.4/lib/rails/templates/rails/welcome/index.html.erb
+  Rendering /Users/jason/.rvm/rubies/ruby-2.6.5/lib/ruby/gems/2.6.0/gems/railties-6.0.3.4/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/jason/.rvm/rubies/ruby-2.6.5/lib/ruby/gems/2.6.0/gems/railties-6.0.3.4/lib/rails/templates/rails/welcome/index.html.erb (Duration: 14.6ms | Allocations: 594)
+  Rendered /Users/jason/.rvm/rubies/ruby-2.6.5/lib/ruby/gems/2.6.0/gems/railties-6.0.3.4/lib/rails/templates/rails/welcome/index.html.erb (Duration: 14.6ms | Allocations: 671)
+Completed 200 OK in 46ms (Views: 25.3ms | ActiveRecord: 0.0ms | Allocations: 4857)
+
+
+Completed 200 OK in 32ms (Views: 24.9ms | ActiveRecord: 0.0ms | Allocations: 3131)
+
+
+Started GET "/" for ::1 at 2021-01-11 11:51:01 -0500
+  [1m[35m (1.6ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 1.8ms | Allocations: 199)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /Users/jason/projects/ruby_on_rails/study_helper/public/packs
+[Webpacker] Hash: 71352ed3d365b5d9c5ad
+Version: webpack 4.46.0
+Time: 7918ms
+Built at: 01/11/2021 11:51:12 AM
+                                     Asset       Size       Chunks                         Chunk Names
+    js/application-c229f7c7014cf8c8d494.js    124 KiB  application  [emitted] [immutable]  application
+js/application-c229f7c7014cf8c8d494.js.map    139 KiB  application  [emitted] [dev]        application
+    js/hello_react-1c175f2d170864c3010d.js    1.1 MiB  hello_react  [emitted] [immutable]  hello_react
+js/hello_react-1c175f2d170864c3010d.js.map   1.27 MiB  hello_react  [emitted] [dev]        hello_react
+                             manifest.json  703 bytes               [emitted]              
+Entrypoint application = js/application-c229f7c7014cf8c8d494.js js/application-c229f7c7014cf8c8d494.js.map
+Entrypoint hello_react = js/hello_react-1c175f2d170864c3010d.js js/hello_react-1c175f2d170864c3010d.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/packs/application.js] 749 bytes {application} [built]
+[./app/javascript/packs/hello_react.jsx] 1.08 KiB {hello_react} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 18 hidden modules
+
+Completed 200 OK in 11028ms (Views: 11017.4ms | ActiveRecord: 0.0ms | Allocations: 20273)
+
+
