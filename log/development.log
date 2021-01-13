@@ -43,3 +43,719 @@ Entrypoint hello_react = js/hello_react-1c175f2d170864c3010d.js js/hello_react-1
 Completed 200 OK in 11028ms (Views: 11017.4ms | ActiveRecord: 0.0ms | Allocations: 20273)
 
 
+  [1m[35m (1.6ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (1.4ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (1.6ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateTopics (20210113153317)
+Started GET "/" for ::1 at 2021-01-13 11:01:55 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+        rails db:migrate RAILS_ENV=development
+
+):
+  
+activerecord (6.0.3.4) lib/active_record/migration.rb:586:in `check_pending!'
+activerecord (6.0.3.4) lib/active_record/migration.rb:564:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.0.3.4) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call'
+web-console (4.1.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.1.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.1.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.1.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.4) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+webpacker (4.3.0) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.3.4) lib/rails/engine.rb:527:in `call'
+puma (4.3.7) lib/puma/configuration.rb:228:in `call'
+puma (4.3.7) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.7) lib/puma/server.rb:472:in `process_client'
+puma (4.3.7) lib/puma/server.rb:328:in `block in run'
+puma (4.3.7) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateTopics (20210113153317)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.7ms)[0m  [1m[35mCREATE TABLE "topics" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "high_score" integer, "user_id" integer, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, CONSTRAINT "fk_rails_7b812cfb44"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE  INDEX "index_topics_on_user_id" ON "topics" ("user_id")[0m
+  [1m[36mprimary::SchemaMigration Create (0.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20210113153317"]]
+  [1m[35m (2.3ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateProblems (20210113153329)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.5ms)[0m  [1m[35mCREATE TABLE "problems" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "answer" varchar, "wrong_answer_1" varchar, "wrong_answer_2" varchar, "wrong_answer_3" varchar, "question" text, "topic_id" integer, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, CONSTRAINT "fk_rails_7f539a29c6"
+FOREIGN KEY ("topic_id")
+  REFERENCES "topics" ("id")
+)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE  INDEX "index_problems_on_topic_id" ON "problems" ("topic_id")[0m
+  [1m[36mprimary::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20210113153329"]]
+  [1m[35m (2.1ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateUsers (20210113153348)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.5ms)[0m  [1m[35mCREATE TABLE "users" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "username" varchar, "password" varchar, "email" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mprimary::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20210113153348"]]
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateSessions (20210113153409)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.8ms)[0m  [1m[35mCREATE TABLE "sessions" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "token" varchar, "user_id" integer, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, CONSTRAINT "fk_rails_758836b4f0"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+)[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE  INDEX "index_sessions_on_user_id" ON "sessions" ("user_id")[0m
+  [1m[36mprimary::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20210113153409"]]
+  [1m[35m (1.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.7ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Create (1.3ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2021-01-13 16:03:41.500525"], ["updated_at", "2021-01-13 16:03:41.500525"]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/" for ::1 at 2021-01-13 11:03:47 -0500
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 0.2ms | Allocations: 5)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /Users/jason/projects/ruby_on_rails/study_helper/public/packs
+[Webpacker] Hash: 71352ed3d365b5d9c5ad
+Version: webpack 4.46.0
+Time: 2009ms
+Built at: 01/13/2021 11:03:52 AM
+                                     Asset       Size       Chunks                         Chunk Names
+    js/application-c229f7c7014cf8c8d494.js    124 KiB  application  [emitted] [immutable]  application
+js/application-c229f7c7014cf8c8d494.js.map    139 KiB  application  [emitted] [dev]        application
+    js/hello_react-1c175f2d170864c3010d.js    1.1 MiB  hello_react  [emitted] [immutable]  hello_react
+js/hello_react-1c175f2d170864c3010d.js.map   1.27 MiB  hello_react  [emitted] [dev]        hello_react
+                             manifest.json  703 bytes               [emitted]              
+Entrypoint application = js/application-c229f7c7014cf8c8d494.js js/application-c229f7c7014cf8c8d494.js.map
+Entrypoint hello_react = js/hello_react-1c175f2d170864c3010d.js js/hello_react-1c175f2d170864c3010d.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/packs/application.js] 749 bytes {application} [built]
+[./app/javascript/packs/hello_react.jsx] 1.08 KiB {hello_react} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 18 hidden modules
+
+Completed 200 OK in 4615ms (Views: 4608.9ms | ActiveRecord: 0.0ms | Allocations: 19655)
+
+
+Started GET "/" for ::1 at 2021-01-13 11:10:05 -0500
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /Users/jason/projects/ruby_on_rails/study_helper/public/packs
+[Webpacker] Hash: f6fcabc7e61777b91e74
+Version: webpack 4.46.0
+Time: 4887ms
+Built at: 01/13/2021 11:10:13 AM
+                                     Asset       Size       Chunks                         Chunk Names
+    js/application-5da6ce65476b605d436f.js    810 KiB  application  [emitted] [immutable]  application
+js/application-5da6ce65476b605d436f.js.map    853 KiB  application  [emitted] [dev]        application
+           js/home-8adeafad50569a944d64.js    1.1 MiB         home  [emitted] [immutable]  home
+       js/home-8adeafad50569a944d64.js.map   1.27 MiB         home  [emitted] [dev]        home
+                             manifest.json  654 bytes               [emitted]              
+Entrypoint application = js/application-5da6ce65476b605d436f.js js/application-5da6ce65476b605d436f.js.map
+Entrypoint home = js/home-8adeafad50569a944d64.js js/home-8adeafad50569a944d64.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/packs/application.js] 790 bytes {application} [built]
+[./app/javascript/packs/home.jsx] 1.07 KiB {home} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 22 hidden modules
+
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 8100.1ms | Allocations: 5541)
+Completed 500 Internal Server Error in 8145ms (ActiveRecord: 0.0ms | Allocations: 14711)
+
+
+  
+ActionView::Template::Error (The asset "application.js" is not present in the asset pipeline.
+):
+     6:     <%= csp_meta_tag %>
+     7: 
+     8:     <%= stylesheet_link_tag    'application', media: 'all' %>
+     9:     <%= javascript_include_tag 'application' %>
+    10:     <%= javascript_pack_tag 'application' %>
+    11:   </head>
+    12: 
+  
+app/views/layouts/application.html.erb:9
+Started GET "/" for ::1 at 2021-01-13 11:33:23 -0500
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /Users/jason/projects/ruby_on_rails/study_helper/public/packs
+[Webpacker] Hash: ae02b363b2a65447f974
+Version: webpack 4.46.0
+Time: 4290ms
+Built at: 01/13/2021 11:33:30 AM
+                                     Asset       Size       Chunks                         Chunk Names
+    js/application-5da6ce65476b605d436f.js    810 KiB  application  [emitted] [immutable]  application
+js/application-5da6ce65476b605d436f.js.map    853 KiB  application  [emitted] [dev]        application
+           js/home-352909bf89480edaa87c.js   1.07 MiB         home  [emitted] [immutable]  home
+       js/home-352909bf89480edaa87c.js.map   1.23 MiB         home  [emitted] [dev]        home
+                             manifest.json  654 bytes               [emitted]              
+Entrypoint application = js/application-5da6ce65476b605d436f.js js/application-5da6ce65476b605d436f.js.map
+Entrypoint home = js/home-352909bf89480edaa87c.js js/home-352909bf89480edaa87c.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/packs/application.js] 790 bytes {application} [built]
+[./app/javascript/packs/home.js] 21 bytes {home} [built]
+[./app/javascript/src/home.jsx] 905 bytes {home} [built]
+[./app/javascript/src/layout.jsx] 3.25 KiB {home} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 16 hidden modules
+
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 7332.0ms | Allocations: 4226)
+Completed 500 Internal Server Error in 7432ms (ActiveRecord: 0.0ms | Allocations: 24793)
+
+
+  
+ActionView::Template::Error (The asset "application.js" is not present in the asset pipeline.
+):
+     6:     <%= csp_meta_tag %>
+     7: 
+     8:     <%= stylesheet_link_tag    'application', media: 'all' %>
+     9:     <%= javascript_include_tag 'application' %>
+    10:     <%= javascript_pack_tag 'application' %>
+    11:   </head>
+    12: 
+  
+app/views/layouts/application.html.erb:9
+app/controllers/static_pages_controller.rb:3:in `home'
+Started GET "/" for ::1 at 2021-01-13 11:36:06 -0500
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 26.5ms | Allocations: 2762)
+Completed 500 Internal Server Error in 78ms (ActiveRecord: 0.0ms | Allocations: 11915)
+
+
+  
+ActionView::Template::Error (The asset "application.js" is not present in the asset pipeline.
+):
+     6:     <%= csp_meta_tag %>
+     7: 
+     8:     <%= stylesheet_link_tag    'application', media: 'all' %>
+     9:     <%= javascript_include_tag 'application' %>
+    10:   </head>
+    11: 
+    12:   <body>
+  
+app/views/layouts/application.html.erb:9
+app/controllers/static_pages_controller.rb:3:in `home'
+Started GET "/" for ::1 at 2021-01-13 11:42:52 -0500
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /Users/jason/projects/ruby_on_rails/study_helper/public/packs
+[Webpacker] Hash: 6aa7ea0cc317c85917ab
+Version: webpack 4.46.0
+Time: 4013ms
+Built at: 01/13/2021 11:42:58 AM
+                                     Asset       Size       Chunks                         Chunk Names
+    js/application-023479878d9c65e60450.js    757 KiB  application  [emitted] [immutable]  application
+js/application-023479878d9c65e60450.js.map    794 KiB  application  [emitted] [dev]        application
+           js/home-352909bf89480edaa87c.js   1.07 MiB         home  [emitted] [immutable]  home
+       js/home-352909bf89480edaa87c.js.map   1.23 MiB         home  [emitted] [dev]        home
+                             manifest.json  654 bytes               [emitted]              
+Entrypoint application = js/application-023479878d9c65e60450.js js/application-023479878d9c65e60450.js.map
+Entrypoint home = js/home-352909bf89480edaa87c.js js/home-352909bf89480edaa87c.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/packs/application.js] 758 bytes {application} [built]
+[./app/javascript/packs/home.js] 21 bytes {home} [built]
+[./app/javascript/src/home.jsx] 905 bytes {home} [built]
+[./app/javascript/src/layout.jsx] 3.25 KiB {home} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 15 hidden modules
+
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 6402.2ms | Allocations: 4695)
+Completed 500 Internal Server Error in 6607ms (ActiveRecord: 0.0ms | Allocations: 43285)
+
+
+  
+ActionView::Template::Error (The asset "application.js" is not present in the asset pipeline.
+):
+     6:     <%= csp_meta_tag %>
+     7: 
+     8:     <%= stylesheet_link_tag    'application', media: 'all' %>
+     9:     <%= javascript_include_tag 'application' %>
+    10:     <%= javascript_pack_tag 'application' %>
+    11: 
+    12:   </head>
+  
+app/views/layouts/application.html.erb:9
+app/controllers/static_pages_controller.rb:3:in `home'
+Started GET "/" for ::1 at 2021-01-13 11:43:18 -0500
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 13.2ms | Allocations: 2760)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 29ms (Views: 28.4ms | ActiveRecord: 0.0ms | Allocations: 8386)
+
+
+Started GET "/" for ::1 at 2021-01-13 11:44:28 -0500
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /Users/jason/projects/ruby_on_rails/study_helper/public/packs
+[Webpacker] Hash: 707c88f31e04cf3adbb9
+Version: webpack 4.46.0
+Time: 4195ms
+Built at: 01/13/2021 11:44:35 AM
+                                     Asset       Size       Chunks                         Chunk Names
+    js/application-023479878d9c65e60450.js    757 KiB  application  [emitted] [immutable]  application
+js/application-023479878d9c65e60450.js.map    794 KiB  application  [emitted] [dev]        application
+           js/home-999efc343aa2bee06d8d.js   1.07 MiB         home  [emitted] [immutable]  home
+       js/home-999efc343aa2bee06d8d.js.map   1.23 MiB         home  [emitted] [dev]        home
+                             manifest.json  654 bytes               [emitted]              
+Entrypoint application = js/application-023479878d9c65e60450.js js/application-023479878d9c65e60450.js.map
+Entrypoint home = js/home-999efc343aa2bee06d8d.js js/home-999efc343aa2bee06d8d.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/packs/application.js] 758 bytes {application} [built]
+[./app/javascript/packs/home.js] 21 bytes {home} [built]
+[./app/javascript/src/home.jsx] 905 bytes {home} [built]
+[./app/javascript/src/layout.jsx] 2.9 KiB {home} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 15 hidden modules
+
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 7171.9ms | Allocations: 4047)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 7210ms (Views: 7208.7ms | ActiveRecord: 0.0ms | Allocations: 9569)
+
+
+Started GET "/" for ::1 at 2021-01-13 11:46:25 -0500
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /Users/jason/projects/ruby_on_rails/study_helper/public/packs
+[Webpacker] Hash: 451b83b49b1f81eb20ab
+Version: webpack 4.46.0
+Time: 4152ms
+Built at: 01/13/2021 11:46:32 AM
+                                     Asset       Size       Chunks                         Chunk Names
+    js/application-023479878d9c65e60450.js    757 KiB  application  [emitted] [immutable]  application
+js/application-023479878d9c65e60450.js.map    794 KiB  application  [emitted] [dev]        application
+           js/home-139e6c66382565815d0b.js   1.07 MiB         home  [emitted] [immutable]  home
+       js/home-139e6c66382565815d0b.js.map   1.23 MiB         home  [emitted] [dev]        home
+                             manifest.json  654 bytes               [emitted]              
+Entrypoint application = js/application-023479878d9c65e60450.js js/application-023479878d9c65e60450.js.map
+Entrypoint home = js/home-139e6c66382565815d0b.js js/home-139e6c66382565815d0b.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/packs/application.js] 758 bytes {application} [built]
+[./app/javascript/packs/home.js] 21 bytes {home} [built]
+[./app/javascript/src/home.jsx] 903 bytes {home} [built]
+[./app/javascript/src/layout.jsx] 2.9 KiB {home} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 15 hidden modules
+
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 7248.9ms | Allocations: 4103)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 7289ms (Views: 7286.9ms | ActiveRecord: 0.0ms | Allocations: 9661)
+
+
+Started GET "/login" for ::1 at 2021-01-13 11:46:43 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/login"):
+  
+actionpack (6.0.3.4) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+web-console (4.1.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.1.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.1.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.1.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.4) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+webpacker (4.3.0) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.3.4) lib/rails/engine.rb:527:in `call'
+puma (4.3.7) lib/puma/configuration.rb:228:in `call'
+puma (4.3.7) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.7) lib/puma/server.rb:472:in `process_client'
+puma (4.3.7) lib/puma/server.rb:328:in `block in run'
+puma (4.3.7) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/login" for ::1 at 2021-01-13 11:47:27 -0500
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by StaticPagesController#login as HTML
+  Rendering static_pages/login.html.erb within layouts/application
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered static_pages/login.html.erb within layouts/application (Duration: 8.9ms | Allocations: 3524)
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.0ms | Allocations: 4080)
+
+
+  
+ActionView::Template::Error (Webpacker can't find login in /Users/jason/projects/ruby_on_rails/study_helper/public/packs/manifest.json. Possible causes:
+1. You want to set webpacker.yml value of compile to true for your environment
+   unless you are using the `webpack -w` or the webpack-dev-server.
+2. webpack has not yet re-run to reflect updates.
+3. You have misconfigured Webpacker's config/webpacker.yml file.
+4. Your webpack configuration is not creating a manifest.
+Your manifest contains:
+{
+  "application.js": "/packs/js/application-023479878d9c65e60450.js",
+  "application.js.map": "/packs/js/application-023479878d9c65e60450.js.map",
+  "entrypoints": {
+    "application": {
+      "js": [
+        "/packs/js/application-023479878d9c65e60450.js"
+      ],
+      "js.map": [
+        "/packs/js/application-023479878d9c65e60450.js.map"
+      ]
+    },
+    "home": {
+      "js": [
+        "/packs/js/home-139e6c66382565815d0b.js"
+      ],
+      "js.map": [
+        "/packs/js/home-139e6c66382565815d0b.js.map"
+      ]
+    }
+  },
+  "home.js": "/packs/js/home-139e6c66382565815d0b.js",
+  "home.js.map": "/packs/js/home-139e6c66382565815d0b.js.map"
+}
+):
+    1: <%= javascript_pack_tag 'login' %>
+  
+app/views/static_pages/login.html.erb:1
+app/controllers/static_pages_controller.rb:7:in `login'
+Started GET "/login" for ::1 at 2021-01-13 11:48:15 -0500
+Processing by StaticPagesController#login as HTML
+  Rendering static_pages/login.html.erb within layouts/application
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /Users/jason/projects/ruby_on_rails/study_helper/public/packs
+[Webpacker] Hash: 81153195fbdf81c8c64a
+Version: webpack 4.46.0
+Time: 4252ms
+Built at: 01/13/2021 11:48:22 AM
+                                     Asset       Size       Chunks                         Chunk Names
+    js/application-023479878d9c65e60450.js    757 KiB  application  [emitted] [immutable]  application
+js/application-023479878d9c65e60450.js.map    794 KiB  application  [emitted] [dev]        application
+           js/home-139e6c66382565815d0b.js   1.07 MiB         home  [emitted] [immutable]  home
+       js/home-139e6c66382565815d0b.js.map   1.23 MiB         home  [emitted] [dev]        home
+          js/login-0a02049ccd28e18d1ada.js   1.07 MiB        login  [emitted] [immutable]  login
+      js/login-0a02049ccd28e18d1ada.js.map   1.23 MiB        login  [emitted] [dev]        login
+                             manifest.json  951 bytes               [emitted]              
+Entrypoint application = js/application-023479878d9c65e60450.js js/application-023479878d9c65e60450.js.map
+Entrypoint home = js/home-139e6c66382565815d0b.js js/home-139e6c66382565815d0b.js.map
+Entrypoint login = js/login-0a02049ccd28e18d1ada.js js/login-0a02049ccd28e18d1ada.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/packs/application.js] 758 bytes {application} [built]
+[./app/javascript/packs/home.js] 21 bytes {home} [built]
+[./app/javascript/packs/login.js] 22 bytes {login} [built]
+[./app/javascript/src/home.jsx] 903 bytes {home} [built]
+[./app/javascript/src/layout.jsx] 2.9 KiB {home} {login} [built]
+[./app/javascript/src/login.jsx] 906 bytes {login} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 15 hidden modules
+
+  Rendered static_pages/login.html.erb within layouts/application (Duration: 7205.2ms | Allocations: 4044)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 7231ms (Views: 7229.9ms | ActiveRecord: 0.0ms | Allocations: 8701)
+
+
+Started GET "/login" for ::1 at 2021-01-13 11:48:59 -0500
+Processing by StaticPagesController#login as HTML
+  Rendering static_pages/login.html.erb within layouts/application
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /Users/jason/projects/ruby_on_rails/study_helper/public/packs
+[Webpacker] Hash: 5e006cf794321c02342b
+Version: webpack 4.46.0
+Time: 4151ms
+Built at: 01/13/2021 11:49:06 AM
+                                     Asset       Size       Chunks                         Chunk Names
+    js/application-023479878d9c65e60450.js    757 KiB  application  [emitted] [immutable]  application
+js/application-023479878d9c65e60450.js.map    794 KiB  application  [emitted] [dev]        application
+           js/home-139e6c66382565815d0b.js   1.07 MiB         home  [emitted] [immutable]  home
+       js/home-139e6c66382565815d0b.js.map   1.23 MiB         home  [emitted] [dev]        home
+          js/login-b7a4726924e69de92c17.js   1.07 MiB        login  [emitted] [immutable]  login
+      js/login-b7a4726924e69de92c17.js.map   1.23 MiB        login  [emitted] [dev]        login
+                             manifest.json  951 bytes               [emitted]              
+Entrypoint application = js/application-023479878d9c65e60450.js js/application-023479878d9c65e60450.js.map
+Entrypoint home = js/home-139e6c66382565815d0b.js js/home-139e6c66382565815d0b.js.map
+Entrypoint login = js/login-b7a4726924e69de92c17.js js/login-b7a4726924e69de92c17.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/packs/application.js] 758 bytes {application} [built]
+[./app/javascript/packs/home.js] 21 bytes {home} [built]
+[./app/javascript/packs/login.js] 22 bytes {login} [built]
+[./app/javascript/src/home.jsx] 903 bytes {home} [built]
+[./app/javascript/src/layout.jsx] 2.9 KiB {home} {login} [built]
+[./app/javascript/src/login.jsx] 908 bytes {login} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 15 hidden modules
+
+  Rendered static_pages/login.html.erb within layouts/application (Duration: 7154.0ms | Allocations: 4053)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 7177ms (Views: 7175.7ms | ActiveRecord: 0.0ms | Allocations: 8704)
+
+
+Started GET "/" for ::1 at 2021-01-13 11:49:11 -0500
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 7.6ms | Allocations: 2713)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 24ms (Views: 23.3ms | ActiveRecord: 0.0ms | Allocations: 7370)
+
+
+Started GET "/" for ::1 at 2021-01-13 11:49:19 -0500
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /Users/jason/projects/ruby_on_rails/study_helper/public/packs
+[Webpacker] Hash: 773636a82b96da5a1f3d
+Version: webpack 4.46.0
+Time: 4197ms
+Built at: 01/13/2021 11:49:26 AM
+                                     Asset       Size       Chunks                         Chunk Names
+    js/application-023479878d9c65e60450.js    757 KiB  application  [emitted] [immutable]  application
+js/application-023479878d9c65e60450.js.map    794 KiB  application  [emitted] [dev]        application
+           js/home-fd45fa5ae23d0578e327.js   1.07 MiB         home  [emitted] [immutable]  home
+       js/home-fd45fa5ae23d0578e327.js.map   1.23 MiB         home  [emitted] [dev]        home
+          js/login-b7a4726924e69de92c17.js   1.07 MiB        login  [emitted] [immutable]  login
+      js/login-b7a4726924e69de92c17.js.map   1.23 MiB        login  [emitted] [dev]        login
+                             manifest.json  951 bytes               [emitted]              
+Entrypoint application = js/application-023479878d9c65e60450.js js/application-023479878d9c65e60450.js.map
+Entrypoint home = js/home-fd45fa5ae23d0578e327.js js/home-fd45fa5ae23d0578e327.js.map
+Entrypoint login = js/login-b7a4726924e69de92c17.js js/login-b7a4726924e69de92c17.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/packs/application.js] 758 bytes {application} [built]
+[./app/javascript/packs/home.js] 21 bytes {home} [built]
+[./app/javascript/packs/login.js] 22 bytes {login} [built]
+[./app/javascript/src/home.jsx] 901 bytes {home} [built]
+[./app/javascript/src/layout.jsx] 2.9 KiB {home} {login} [built]
+[./app/javascript/src/login.jsx] 908 bytes {login} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 15 hidden modules
+
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 6606.1ms | Allocations: 4041)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 6627ms (Views: 6626.2ms | ActiveRecord: 0.0ms | Allocations: 8696)
+
+
+Started GET "/login" for ::1 at 2021-01-13 11:49:34 -0500
+Processing by StaticPagesController#login as HTML
+  Rendering static_pages/login.html.erb within layouts/application
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered static_pages/login.html.erb within layouts/application (Duration: 8.2ms | Allocations: 2713)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 23ms (Views: 22.8ms | ActiveRecord: 0.0ms | Allocations: 7374)
+
+
+Started GET "/" for ::1 at 2021-01-13 11:49:35 -0500
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 9.9ms | Allocations: 2713)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 23ms (Views: 22.7ms | ActiveRecord: 0.0ms | Allocations: 7364)
+
+
+Started GET "/login" for ::1 at 2021-01-13 11:49:36 -0500
+Processing by StaticPagesController#login as HTML
+  Rendering static_pages/login.html.erb within layouts/application
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered static_pages/login.html.erb within layouts/application (Duration: 10.3ms | Allocations: 2713)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 23ms (Views: 22.5ms | ActiveRecord: 0.0ms | Allocations: 7372)
+
+
+Started GET "/login" for ::1 at 2021-01-13 11:52:54 -0500
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by StaticPagesController#login as HTML
+  Rendering static_pages/login.html.erb within layouts/application
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /Users/jason/projects/ruby_on_rails/study_helper/public/packs
+[Webpacker] Hash: b82966ddf79d62c4a2bc
+Version: webpack 4.46.0
+Time: 4282ms
+Built at: 01/13/2021 11:53:02 AM
+                                     Asset      Size       Chunks                         Chunk Names
+    js/application-023479878d9c65e60450.js   757 KiB  application  [emitted] [immutable]  application
+js/application-023479878d9c65e60450.js.map   794 KiB  application  [emitted] [dev]        application
+           js/home-8aa79e7cf3b0b0b1705a.js  1.07 MiB         home  [emitted] [immutable]  home
+       js/home-8aa79e7cf3b0b0b1705a.js.map  1.23 MiB         home  [emitted] [dev]        home
+          js/login-2b7b9f2f29eb9e88214b.js  1.07 MiB        login  [emitted] [immutable]  login
+      js/login-2b7b9f2f29eb9e88214b.js.map  1.23 MiB        login  [emitted] [dev]        login
+         js/logout-88128fdd6467093bf0b8.js  3.87 KiB       logout  [emitted] [immutable]  logout
+     js/logout-88128fdd6467093bf0b8.js.map  3.52 KiB       logout  [emitted] [dev]        logout
+                             manifest.json  1.23 KiB               [emitted]              
+Entrypoint application = js/application-023479878d9c65e60450.js js/application-023479878d9c65e60450.js.map
+Entrypoint home = js/home-8aa79e7cf3b0b0b1705a.js js/home-8aa79e7cf3b0b0b1705a.js.map
+Entrypoint login = js/login-2b7b9f2f29eb9e88214b.js js/login-2b7b9f2f29eb9e88214b.js.map
+Entrypoint logout = js/logout-88128fdd6467093bf0b8.js js/logout-88128fdd6467093bf0b8.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/packs/application.js] 758 bytes {application} [built]
+[./app/javascript/packs/home.js] 21 bytes {home} [built]
+[./app/javascript/packs/login.js] 22 bytes {login} [built]
+[./app/javascript/packs/logout.js] 0 bytes {logout} [built]
+[./app/javascript/src/home.jsx] 901 bytes {home} [built]
+[./app/javascript/src/layout.jsx] 3.3 KiB {home} {login} [built]
+[./app/javascript/src/login.jsx] 908 bytes {login} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 15 hidden modules
+
+  Rendered static_pages/login.html.erb within layouts/application (Duration: 7357.6ms | Allocations: 4173)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 7379ms (Views: 7378.1ms | ActiveRecord: 0.0ms | Allocations: 9808)
+
+
+Started GET "/logout" for ::1 at 2021-01-13 11:53:06 -0500
+Processing by StaticPagesController#logout as HTML
+  Rendering static_pages/logout.html.erb within layouts/application
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered static_pages/logout.html.erb within layouts/application (Duration: 12.2ms | Allocations: 2851)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 26ms (Views: 25.4ms | ActiveRecord: 0.0ms | Allocations: 7693)
+
+
+Started GET "/logout" for ::1 at 2021-01-13 11:53:29 -0500
+Processing by StaticPagesController#logout as HTML
+  Rendering static_pages/logout.html.erb within layouts/application
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /Users/jason/projects/ruby_on_rails/study_helper/public/packs
+[Webpacker] Hash: 2ed5f06b27d4113be288
+Version: webpack 4.46.0
+Time: 4356ms
+Built at: 01/13/2021 11:53:36 AM
+                                     Asset      Size       Chunks                         Chunk Names
+    js/application-023479878d9c65e60450.js   757 KiB  application  [emitted] [immutable]  application
+js/application-023479878d9c65e60450.js.map   794 KiB  application  [emitted] [dev]        application
+           js/home-8aa79e7cf3b0b0b1705a.js  1.07 MiB         home  [emitted] [immutable]  home
+       js/home-8aa79e7cf3b0b0b1705a.js.map  1.23 MiB         home  [emitted] [dev]        home
+          js/login-2b7b9f2f29eb9e88214b.js  1.07 MiB        login  [emitted] [immutable]  login
+      js/login-2b7b9f2f29eb9e88214b.js.map  1.23 MiB        login  [emitted] [dev]        login
+         js/logout-e35fc400a22fdf219622.js  1.07 MiB       logout  [emitted] [immutable]  logout
+     js/logout-e35fc400a22fdf219622.js.map  1.23 MiB       logout  [emitted] [dev]        logout
+                             manifest.json  1.23 KiB               [emitted]              
+Entrypoint application = js/application-023479878d9c65e60450.js js/application-023479878d9c65e60450.js.map
+Entrypoint home = js/home-8aa79e7cf3b0b0b1705a.js js/home-8aa79e7cf3b0b0b1705a.js.map
+Entrypoint login = js/login-2b7b9f2f29eb9e88214b.js js/login-2b7b9f2f29eb9e88214b.js.map
+Entrypoint logout = js/logout-e35fc400a22fdf219622.js js/logout-e35fc400a22fdf219622.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/packs/application.js] 758 bytes {application} [built]
+[./app/javascript/packs/home.js] 21 bytes {home} [built]
+[./app/javascript/packs/login.js] 22 bytes {login} [built]
+[./app/javascript/packs/logout.js] 23 bytes {logout} [built]
+[./app/javascript/src/home.jsx] 901 bytes {home} [built]
+[./app/javascript/src/layout.jsx] 3.3 KiB {home} {login} {logout} [built]
+[./app/javascript/src/login.jsx] 908 bytes {login} [built]
+[./app/javascript/src/logout.jsx] 914 bytes {logout} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 15 hidden modules
+
+  Rendered static_pages/logout.html.erb within layouts/application (Duration: 7191.9ms | Allocations: 4128)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 7216ms (Views: 7215.7ms | ActiveRecord: 0.0ms | Allocations: 8828)
+
+
+Started GET "/login" for ::1 at 2021-01-13 11:53:45 -0500
+Processing by StaticPagesController#login as HTML
+  Rendering static_pages/login.html.erb within layouts/application
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered static_pages/login.html.erb within layouts/application (Duration: 11.4ms | Allocations: 2761)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 88ms (Views: 87.9ms | ActiveRecord: 0.0ms | Allocations: 7484)
+
+
+Started GET "/" for ::1 at 2021-01-13 11:53:46 -0500
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 9.4ms | Allocations: 2854)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 22ms (Views: 21.7ms | ActiveRecord: 0.0ms | Allocations: 7691)
+
+
+Started GET "/login" for ::1 at 2021-01-13 11:53:48 -0500
+Processing by StaticPagesController#login as HTML
+  Rendering static_pages/login.html.erb within layouts/application
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered static_pages/login.html.erb within layouts/application (Duration: 7.6ms | Allocations: 2761)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 21ms (Views: 20.3ms | ActiveRecord: 0.0ms | Allocations: 7479)
+
+
+Started GET "/logout" for ::1 at 2021-01-13 11:53:49 -0500
+Processing by StaticPagesController#logout as HTML
+  Rendering static_pages/logout.html.erb within layouts/application
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered static_pages/logout.html.erb within layouts/application (Duration: 8.3ms | Allocations: 2762)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 23ms (Views: 22.4ms | ActiveRecord: 0.0ms | Allocations: 7464)
+
+
+Started GET "/login" for ::1 at 2021-01-13 11:53:50 -0500
+Processing by StaticPagesController#login as HTML
+  Rendering static_pages/login.html.erb within layouts/application
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered static_pages/login.html.erb within layouts/application (Duration: 8.0ms | Allocations: 2761)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 19ms (Views: 18.8ms | ActiveRecord: 0.0ms | Allocations: 7462)
+
+
+Started GET "/" for ::1 at 2021-01-13 11:53:50 -0500
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 7.6ms | Allocations: 2761)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 21ms (Views: 20.9ms | ActiveRecord: 0.0ms | Allocations: 7460)
+
+
