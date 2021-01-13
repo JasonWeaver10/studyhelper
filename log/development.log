@@ -759,3 +759,651 @@ Processing by StaticPagesController#home as HTML
 Completed 200 OK in 21ms (Views: 20.9ms | ActiveRecord: 0.0ms | Allocations: 7460)
 
 
+Started GET "/" for ::1 at 2021-01-13 11:58:30 -0500
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /Users/jason/projects/ruby_on_rails/study_helper/public/packs
+[Webpacker] Hash: 68bc73ea653aead661d5
+Version: webpack 4.46.0
+Time: 4882ms
+Built at: 01/13/2021 11:58:39 AM
+                                     Asset      Size       Chunks                         Chunk Names
+    js/addQuestion-c97693bdf72515ec3729.js  1.07 MiB  addQuestion  [emitted] [immutable]  addQuestion
+js/addQuestion-c97693bdf72515ec3729.js.map  1.23 MiB  addQuestion  [emitted] [dev]        addQuestion
+    js/application-023479878d9c65e60450.js   757 KiB  application  [emitted] [immutable]  application
+js/application-023479878d9c65e60450.js.map   794 KiB  application  [emitted] [dev]        application
+           js/home-ffa45925e5aeafb8ea8a.js  1.07 MiB         home  [emitted] [immutable]  home
+       js/home-ffa45925e5aeafb8ea8a.js.map  1.23 MiB         home  [emitted] [dev]        home
+          js/login-503941ba5d0d8b9e296b.js  1.07 MiB        login  [emitted] [immutable]  login
+      js/login-503941ba5d0d8b9e296b.js.map  1.23 MiB        login  [emitted] [dev]        login
+         js/logout-4fe38f84884caa0aeea5.js  1.07 MiB       logout  [emitted] [immutable]  logout
+     js/logout-4fe38f84884caa0aeea5.js.map  1.23 MiB       logout  [emitted] [dev]        logout
+                             manifest.json  1.56 KiB               [emitted]              
+Entrypoint addQuestion = js/addQuestion-c97693bdf72515ec3729.js js/addQuestion-c97693bdf72515ec3729.js.map
+Entrypoint application = js/application-023479878d9c65e60450.js js/application-023479878d9c65e60450.js.map
+Entrypoint home = js/home-ffa45925e5aeafb8ea8a.js js/home-ffa45925e5aeafb8ea8a.js.map
+Entrypoint login = js/login-503941ba5d0d8b9e296b.js js/login-503941ba5d0d8b9e296b.js.map
+Entrypoint logout = js/logout-4fe38f84884caa0aeea5.js js/logout-4fe38f84884caa0aeea5.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/packs/addQuestion.js] 28 bytes {addQuestion} [built]
+[./app/javascript/packs/application.js] 758 bytes {application} [built]
+[./app/javascript/packs/home.js] 21 bytes {home} [built]
+[./app/javascript/packs/login.js] 22 bytes {login} [built]
+[./app/javascript/packs/logout.js] 23 bytes {logout} [built]
+[./app/javascript/src/addQuestion.jsx] 946 bytes {addQuestion} [built]
+[./app/javascript/src/home.jsx] 901 bytes {home} [built]
+[./app/javascript/src/layout.jsx] 3.72 KiB {addQuestion} {home} {login} {logout} [built]
+[./app/javascript/src/login.jsx] 908 bytes {login} [built]
+[./app/javascript/src/logout.jsx] 914 bytes {logout} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 15 hidden modules
+
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 7925.3ms | Allocations: 4261)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 7949ms (Views: 7948.7ms | ActiveRecord: 0.0ms | Allocations: 9937)
+
+
+Started GET "/addQuestion" for ::1 at 2021-01-13 12:00:20 -0500
+Processing by StaticPagesController#addQuestion as HTML
+  Rendering static_pages/addQuestion.html.erb within layouts/application
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered static_pages/addQuestion.html.erb within layouts/application (Duration: 33.8ms | Allocations: 2899)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 68ms (Views: 66.7ms | ActiveRecord: 0.0ms | Allocations: 7799)
+
+
+Started GET "/addQuestion" for ::1 at 2021-01-13 12:00:59 -0500
+Processing by StaticPagesController#addQuestion as HTML
+  Rendering static_pages/addQuestion.html.erb within layouts/application
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /Users/jason/projects/ruby_on_rails/study_helper/public/packs
+[Webpacker] Hash: e470b64c27d83afd629a
+Version: webpack 4.46.0
+Time: 4474ms
+Built at: 01/13/2021 12:01:07 PM
+                                     Asset      Size       Chunks                         Chunk Names
+    js/addQuestion-a15ea300f370fd5123af.js  1.07 MiB  addQuestion  [emitted] [immutable]  addQuestion
+js/addQuestion-a15ea300f370fd5123af.js.map  1.23 MiB  addQuestion  [emitted] [dev]        addQuestion
+    js/application-023479878d9c65e60450.js   757 KiB  application  [emitted] [immutable]  application
+js/application-023479878d9c65e60450.js.map   794 KiB  application  [emitted] [dev]        application
+           js/home-ffa45925e5aeafb8ea8a.js  1.07 MiB         home  [emitted] [immutable]  home
+       js/home-ffa45925e5aeafb8ea8a.js.map  1.23 MiB         home  [emitted] [dev]        home
+          js/login-503941ba5d0d8b9e296b.js  1.07 MiB        login  [emitted] [immutable]  login
+      js/login-503941ba5d0d8b9e296b.js.map  1.23 MiB        login  [emitted] [dev]        login
+         js/logout-4fe38f84884caa0aeea5.js  1.07 MiB       logout  [emitted] [immutable]  logout
+     js/logout-4fe38f84884caa0aeea5.js.map  1.23 MiB       logout  [emitted] [dev]        logout
+                             manifest.json  1.56 KiB               [emitted]              
+Entrypoint addQuestion = js/addQuestion-a15ea300f370fd5123af.js js/addQuestion-a15ea300f370fd5123af.js.map
+Entrypoint application = js/application-023479878d9c65e60450.js js/application-023479878d9c65e60450.js.map
+Entrypoint home = js/home-ffa45925e5aeafb8ea8a.js js/home-ffa45925e5aeafb8ea8a.js.map
+Entrypoint login = js/login-503941ba5d0d8b9e296b.js js/login-503941ba5d0d8b9e296b.js.map
+Entrypoint logout = js/logout-4fe38f84884caa0aeea5.js js/logout-4fe38f84884caa0aeea5.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/packs/addQuestion.js] 28 bytes {addQuestion} [built]
+[./app/javascript/packs/application.js] 758 bytes {application} [built]
+[./app/javascript/packs/home.js] 21 bytes {home} [built]
+[./app/javascript/packs/login.js] 22 bytes {login} [built]
+[./app/javascript/packs/logout.js] 23 bytes {logout} [built]
+[./app/javascript/src/addQuestion.jsx] 944 bytes {addQuestion} [built]
+[./app/javascript/src/home.jsx] 901 bytes {home} [built]
+[./app/javascript/src/layout.jsx] 3.72 KiB {addQuestion} {home} {login} {logout} [built]
+[./app/javascript/src/login.jsx] 908 bytes {login} [built]
+[./app/javascript/src/logout.jsx] 914 bytes {logout} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 15 hidden modules
+
+  Rendered static_pages/addQuestion.html.erb within layouts/application (Duration: 7519.7ms | Allocations: 4213)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 7546ms (Views: 7544.7ms | ActiveRecord: 0.0ms | Allocations: 8971)
+
+
+Started GET "/logout" for ::1 at 2021-01-13 12:01:30 -0500
+Processing by StaticPagesController#logout as HTML
+  Rendering static_pages/logout.html.erb within layouts/application
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered static_pages/logout.html.erb within layouts/application (Duration: 10.2ms | Allocations: 2902)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 24ms (Views: 23.3ms | ActiveRecord: 0.0ms | Allocations: 7791)
+
+
+Started GET "/login" for ::1 at 2021-01-13 12:01:31 -0500
+Processing by StaticPagesController#login as HTML
+  Rendering static_pages/login.html.erb within layouts/application
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered static_pages/login.html.erb within layouts/application (Duration: 9.5ms | Allocations: 2897)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 21ms (Views: 20.9ms | ActiveRecord: 0.0ms | Allocations: 7779)
+
+
+Started GET "/" for ::1 at 2021-01-13 12:01:32 -0500
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 8.1ms | Allocations: 2809)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 22ms (Views: 21.6ms | ActiveRecord: 0.0ms | Allocations: 7549)
+
+
+Started GET "/addQuestion" for ::1 at 2021-01-13 12:01:33 -0500
+Processing by StaticPagesController#addQuestion as HTML
+  Rendering static_pages/addQuestion.html.erb within layouts/application
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered static_pages/addQuestion.html.erb within layouts/application (Duration: 8.1ms | Allocations: 2809)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 20ms (Views: 20.0ms | ActiveRecord: 0.0ms | Allocations: 7564)
+
+
+Started GET "/addQuestion" for ::1 at 2021-01-13 12:04:14 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by StaticPagesController#addQuestion as HTML
+  Rendering static_pages/addQuestion.html.erb within layouts/application
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /Users/jason/projects/ruby_on_rails/study_helper/public/packs
+[Webpacker] Hash: fa7ecc0691770645bb4b
+Version: webpack 4.46.0
+Time: 4809ms
+Built at: 01/13/2021 12:04:22 PM
+                                     Asset      Size       Chunks                         Chunk Names
+    js/addQuestion-356c07286ed92217c2db.js  1.07 MiB  addQuestion  [emitted] [immutable]  addQuestion
+js/addQuestion-356c07286ed92217c2db.js.map  1.23 MiB  addQuestion  [emitted] [dev]        addQuestion
+       js/addTopic-f439f78244da90018c3b.js  1.07 MiB     addTopic  [emitted] [immutable]  addTopic
+   js/addTopic-f439f78244da90018c3b.js.map  1.23 MiB     addTopic  [emitted] [dev]        addTopic
+    js/application-023479878d9c65e60450.js   757 KiB  application  [emitted] [immutable]  application
+js/application-023479878d9c65e60450.js.map   794 KiB  application  [emitted] [dev]        application
+           js/home-df64347b37978cfc0fc9.js  1.07 MiB         home  [emitted] [immutable]  home
+       js/home-df64347b37978cfc0fc9.js.map  1.23 MiB         home  [emitted] [dev]        home
+          js/login-9b37f8f7553d36d7f81c.js  1.07 MiB        login  [emitted] [immutable]  login
+      js/login-9b37f8f7553d36d7f81c.js.map  1.23 MiB        login  [emitted] [dev]        login
+         js/logout-f140f24a96f234b924ca.js  1.07 MiB       logout  [emitted] [immutable]  logout
+     js/logout-f140f24a96f234b924ca.js.map  1.23 MiB       logout  [emitted] [dev]        logout
+                             manifest.json  1.87 KiB               [emitted]              
+Entrypoint addQuestion = js/addQuestion-356c07286ed92217c2db.js js/addQuestion-356c07286ed92217c2db.js.map
+Entrypoint addTopic = js/addTopic-f439f78244da90018c3b.js js/addTopic-f439f78244da90018c3b.js.map
+Entrypoint application = js/application-023479878d9c65e60450.js js/application-023479878d9c65e60450.js.map
+Entrypoint home = js/home-df64347b37978cfc0fc9.js js/home-df64347b37978cfc0fc9.js.map
+Entrypoint login = js/login-9b37f8f7553d36d7f81c.js js/login-9b37f8f7553d36d7f81c.js.map
+Entrypoint logout = js/logout-f140f24a96f234b924ca.js js/logout-f140f24a96f234b924ca.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/packs/addQuestion.js] 28 bytes {addQuestion} [built]
+[./app/javascript/packs/addTopic.js] 25 bytes {addTopic} [built]
+[./app/javascript/packs/application.js] 758 bytes {application} [built]
+[./app/javascript/packs/home.js] 21 bytes {home} [built]
+[./app/javascript/packs/login.js] 22 bytes {login} [built]
+[./app/javascript/packs/logout.js] 23 bytes {logout} [built]
+[./app/javascript/src/addQuestion.jsx] 944 bytes {addQuestion} [built]
+[./app/javascript/src/addTopic.jsx] 926 bytes {addTopic} [built]
+[./app/javascript/src/home.jsx] 901 bytes {home} [built]
+[./app/javascript/src/layout.jsx] 4.12 KiB {addQuestion} {addTopic} {home} {login} {logout} [built]
+[./app/javascript/src/login.jsx] 908 bytes {login} [built]
+[./app/javascript/src/logout.jsx] 914 bytes {logout} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 15 hidden modules
+
+  Rendered static_pages/addQuestion.html.erb within layouts/application (Duration: 8135.0ms | Allocations: 4345)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 8160ms (Views: 8159.3ms | ActiveRecord: 0.0ms | Allocations: 10070)
+
+
+Started GET "/addTopic" for ::1 at 2021-01-13 12:05:12 -0500
+Processing by StaticPagesController#addTopic as HTML
+  Rendering static_pages/addTopic.html.erb within layouts/application
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered static_pages/addTopic.html.erb within layouts/application (Duration: 23.9ms | Allocations: 2947)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 42ms (Views: 40.9ms | ActiveRecord: 0.0ms | Allocations: 7882)
+
+
+Started GET "/addQuestion" for ::1 at 2021-01-13 12:05:14 -0500
+Processing by StaticPagesController#addQuestion as HTML
+  Rendering static_pages/addQuestion.html.erb within layouts/application
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered static_pages/addQuestion.html.erb within layouts/application (Duration: 9.2ms | Allocations: 2857)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 24ms (Views: 23.3ms | ActiveRecord: 0.0ms | Allocations: 7657)
+
+
+Started GET "/logout" for ::1 at 2021-01-13 12:05:15 -0500
+Processing by StaticPagesController#logout as HTML
+  Rendering static_pages/logout.html.erb within layouts/application
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered static_pages/logout.html.erb within layouts/application (Duration: 10.2ms | Allocations: 2945)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 68ms (Views: 67.8ms | ActiveRecord: 0.0ms | Allocations: 7891)
+
+
+Started GET "/login" for ::1 at 2021-01-13 12:05:16 -0500
+Processing by StaticPagesController#login as HTML
+  Rendering static_pages/login.html.erb within layouts/application
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered static_pages/login.html.erb within layouts/application (Duration: 9.8ms | Allocations: 2950)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 22ms (Views: 21.2ms | ActiveRecord: 0.0ms | Allocations: 7899)
+
+
+Started GET "/login" for ::1 at 2021-01-13 12:05:16 -0500
+Processing by StaticPagesController#login as HTML
+  Rendering static_pages/login.html.erb within layouts/application
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered static_pages/login.html.erb within layouts/application (Duration: 8.0ms | Allocations: 2857)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 21ms (Views: 20.0ms | ActiveRecord: 0.0ms | Allocations: 7655)
+
+
+Started GET "/" for ::1 at 2021-01-13 12:05:18 -0500
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 9.6ms | Allocations: 2945)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 22ms (Views: 21.7ms | ActiveRecord: 0.0ms | Allocations: 7898)
+
+
+Started GET "/login" for ::1 at 2021-01-13 12:05:18 -0500
+Processing by StaticPagesController#login as HTML
+  Rendering static_pages/login.html.erb within layouts/application
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered static_pages/login.html.erb within layouts/application (Duration: 8.6ms | Allocations: 2857)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 20ms (Views: 20.1ms | ActiveRecord: 0.0ms | Allocations: 7661)
+
+
+Started GET "/logout" for ::1 at 2021-01-13 12:05:19 -0500
+Processing by StaticPagesController#logout as HTML
+  Rendering static_pages/logout.html.erb within layouts/application
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered static_pages/logout.html.erb within layouts/application (Duration: 8.6ms | Allocations: 2857)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 21ms (Views: 20.5ms | ActiveRecord: 0.0ms | Allocations: 7648)
+
+
+Started GET "/addQuestion" for ::1 at 2021-01-13 12:05:19 -0500
+Processing by StaticPagesController#addQuestion as HTML
+  Rendering static_pages/addQuestion.html.erb within layouts/application
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered static_pages/addQuestion.html.erb within layouts/application (Duration: 17.6ms | Allocations: 2857)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 30ms (Views: 29.4ms | ActiveRecord: 0.0ms | Allocations: 7652)
+
+
+Started GET "/addTopic" for ::1 at 2021-01-13 12:05:20 -0500
+Processing by StaticPagesController#addTopic as HTML
+  Rendering static_pages/addTopic.html.erb within layouts/application
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered static_pages/addTopic.html.erb within layouts/application (Duration: 7.9ms | Allocations: 2857)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 20ms (Views: 20.2ms | ActiveRecord: 0.0ms | Allocations: 7650)
+
+
+Started GET "/addTopic" for ::1 at 2021-01-13 12:08:25 -0500
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by StaticPagesController#addTopic as HTML
+  Rendering static_pages/addTopic.html.erb within layouts/application
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /Users/jason/projects/ruby_on_rails/study_helper/public/packs
+[Webpacker] Hash: 1e8cc16e7f8e8989d046
+Version: webpack 4.46.0
+Time: 4804ms
+Built at: 01/13/2021 12:08:33 PM
+                                     Asset      Size       Chunks                         Chunk Names
+    js/addQuestion-8a7e09054a4059e3d26c.js  1.07 MiB  addQuestion  [emitted] [immutable]  addQuestion
+js/addQuestion-8a7e09054a4059e3d26c.js.map  1.23 MiB  addQuestion  [emitted] [dev]        addQuestion
+       js/addTopic-c203ca6da91203e9407f.js  1.07 MiB     addTopic  [emitted] [immutable]  addTopic
+   js/addTopic-c203ca6da91203e9407f.js.map  1.23 MiB     addTopic  [emitted] [dev]        addTopic
+      js/allTopics-ed986d375a6c8ee7c0c9.js  1.07 MiB    allTopics  [emitted] [immutable]  allTopics
+  js/allTopics-ed986d375a6c8ee7c0c9.js.map  1.23 MiB    allTopics  [emitted] [dev]        allTopics
+    js/application-023479878d9c65e60450.js   757 KiB  application  [emitted] [immutable]  application
+js/application-023479878d9c65e60450.js.map   794 KiB  application  [emitted] [dev]        application
+           js/home-7dbb21253dbb268f2abc.js  1.07 MiB         home  [emitted] [immutable]  home
+       js/home-7dbb21253dbb268f2abc.js.map  1.23 MiB         home  [emitted] [dev]        home
+          js/login-718c58945e8172d9b10c.js  1.07 MiB        login  [emitted] [immutable]  login
+      js/login-718c58945e8172d9b10c.js.map  1.23 MiB        login  [emitted] [dev]        login
+         js/logout-3b17ee01efa9d8519648.js  1.07 MiB       logout  [emitted] [immutable]  logout
+     js/logout-3b17ee01efa9d8519648.js.map  1.23 MiB       logout  [emitted] [dev]        logout
+                             manifest.json  2.18 KiB               [emitted]              
+Entrypoint addQuestion = js/addQuestion-8a7e09054a4059e3d26c.js js/addQuestion-8a7e09054a4059e3d26c.js.map
+Entrypoint addTopic = js/addTopic-c203ca6da91203e9407f.js js/addTopic-c203ca6da91203e9407f.js.map
+Entrypoint allTopics = js/allTopics-ed986d375a6c8ee7c0c9.js js/allTopics-ed986d375a6c8ee7c0c9.js.map
+Entrypoint application = js/application-023479878d9c65e60450.js js/application-023479878d9c65e60450.js.map
+Entrypoint home = js/home-7dbb21253dbb268f2abc.js js/home-7dbb21253dbb268f2abc.js.map
+Entrypoint login = js/login-718c58945e8172d9b10c.js js/login-718c58945e8172d9b10c.js.map
+Entrypoint logout = js/logout-3b17ee01efa9d8519648.js js/logout-3b17ee01efa9d8519648.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/packs/addQuestion.js] 28 bytes {addQuestion} [built]
+[./app/javascript/packs/addTopic.js] 25 bytes {addTopic} [built]
+[./app/javascript/packs/allTopics.js] 26 bytes {allTopics} [built]
+[./app/javascript/packs/application.js] 758 bytes {application} [built]
+[./app/javascript/packs/home.js] 21 bytes {home} [built]
+[./app/javascript/packs/login.js] 22 bytes {login} [built]
+[./app/javascript/packs/logout.js] 23 bytes {logout} [built]
+[./app/javascript/src/addQuestion.jsx] 944 bytes {addQuestion} [built]
+[./app/javascript/src/addTopic.jsx] 926 bytes {addTopic} [built]
+[./app/javascript/src/allTopics.jsx] 932 bytes {allTopics} [built]
+[./app/javascript/src/home.jsx] 901 bytes {home} [built]
+[./app/javascript/src/login.jsx] 908 bytes {login} [built]
+[./app/javascript/src/logout.jsx] 914 bytes {logout} [built]
+    + 17 hidden modules
+
+  Rendered static_pages/addTopic.html.erb within layouts/application (Duration: 7845.4ms | Allocations: 4429)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 7870ms (Views: 7869.4ms | ActiveRecord: 0.0ms | Allocations: 10207)
+
+
+Started GET "/allTopics" for ::1 at 2021-01-13 12:08:40 -0500
+Processing by StaticPagesController#allTopics as HTML
+  Rendering static_pages/allTopics.html.erb within layouts/application
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered static_pages/allTopics.html.erb within layouts/application (Duration: 11.4ms | Allocations: 2995)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 26ms (Views: 25.3ms | ActiveRecord: 0.0ms | Allocations: 7987)
+
+
+Started GET "/addTopic" for ::1 at 2021-01-13 12:08:41 -0500
+Processing by StaticPagesController#addTopic as HTML
+  Rendering static_pages/addTopic.html.erb within layouts/application
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered static_pages/addTopic.html.erb within layouts/application (Duration: 8.9ms | Allocations: 2905)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 62ms (Views: 61.3ms | ActiveRecord: 0.0ms | Allocations: 7751)
+
+
+Started GET "/addQuestion" for ::1 at 2021-01-13 12:08:42 -0500
+Processing by StaticPagesController#addQuestion as HTML
+  Rendering static_pages/addQuestion.html.erb within layouts/application
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered static_pages/addQuestion.html.erb within layouts/application (Duration: 22.1ms | Allocations: 2993)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 56ms (Views: 55.5ms | ActiveRecord: 0.0ms | Allocations: 7974)
+
+
+Started GET "/logout" for ::1 at 2021-01-13 12:08:43 -0500
+Processing by StaticPagesController#logout as HTML
+  Rendering static_pages/logout.html.erb within layouts/application
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered static_pages/logout.html.erb within layouts/application (Duration: 21.4ms | Allocations: 2993)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 61ms (Views: 61.0ms | ActiveRecord: 0.0ms | Allocations: 7981)
+
+
+Started GET "/login" for ::1 at 2021-01-13 12:08:44 -0500
+Processing by StaticPagesController#login as HTML
+  Rendering static_pages/login.html.erb within layouts/application
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered static_pages/login.html.erb within layouts/application (Duration: 9.3ms | Allocations: 2998)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 21ms (Views: 20.9ms | ActiveRecord: 0.0ms | Allocations: 7984)
+
+
+Started GET "/" for ::1 at 2021-01-13 12:08:44 -0500
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 9.1ms | Allocations: 2993)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 22ms (Views: 21.3ms | ActiveRecord: 0.0ms | Allocations: 7989)
+
+
+Started GET "/allTopics" for ::1 at 2021-01-13 12:08:45 -0500
+Processing by StaticPagesController#allTopics as HTML
+  Rendering static_pages/allTopics.html.erb within layouts/application
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered static_pages/allTopics.html.erb within layouts/application (Duration: 8.3ms | Allocations: 2905)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 20ms (Views: 19.5ms | ActiveRecord: 0.0ms | Allocations: 7759)
+
+
+Started GET "/allTopics" for ::1 at 2021-01-13 12:13:47 -0500
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by StaticPagesController#allTopics as HTML
+  Rendering static_pages/allTopics.html.erb within layouts/application
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /Users/jason/projects/ruby_on_rails/study_helper/public/packs
+[Webpacker] Hash: fb22994a440d316d3fa6
+Version: webpack 4.46.0
+Time: 4886ms
+Built at: 01/13/2021 12:13:56 PM
+                                      Asset      Size        Chunks                         Chunk Names
+     js/addQuestion-32ad630073c0654e2e2c.js  1.07 MiB   addQuestion  [emitted] [immutable]  addQuestion
+ js/addQuestion-32ad630073c0654e2e2c.js.map  1.23 MiB   addQuestion  [emitted] [dev]        addQuestion
+        js/addTopic-7254ab34429b2dcb1010.js  1.07 MiB      addTopic  [emitted] [immutable]  addTopic
+    js/addTopic-7254ab34429b2dcb1010.js.map  1.23 MiB      addTopic  [emitted] [dev]        addTopic
+       js/allTopics-86b6bbb527b867cc06a9.js  1.07 MiB     allTopics  [emitted] [immutable]  allTopics
+   js/allTopics-86b6bbb527b867cc06a9.js.map  1.23 MiB     allTopics  [emitted] [dev]        allTopics
+     js/application-023479878d9c65e60450.js   757 KiB   application  [emitted] [immutable]  application
+ js/application-023479878d9c65e60450.js.map   794 KiB   application  [emitted] [dev]        application
+    js/editQuestion-ad475656dee863b30456.js  1.07 MiB  editQuestion  [emitted] [immutable]  editQuestion
+js/editQuestion-ad475656dee863b30456.js.map  1.23 MiB  editQuestion  [emitted] [dev]        editQuestion
+            js/home-a99e7e109a5142abfbd0.js  1.07 MiB          home  [emitted] [immutable]  home
+        js/home-a99e7e109a5142abfbd0.js.map  1.23 MiB          home  [emitted] [dev]        home
+           js/login-9b98fe5f4f78931f2277.js  1.07 MiB         login  [emitted] [immutable]  login
+       js/login-9b98fe5f4f78931f2277.js.map  1.23 MiB         login  [emitted] [dev]        login
+          js/logout-3af73a12c6eaf3b188fb.js  1.07 MiB        logout  [emitted] [immutable]  logout
+      js/logout-3af73a12c6eaf3b188fb.js.map  1.23 MiB        logout  [emitted] [dev]        logout
+                              manifest.json  2.52 KiB                [emitted]              
+Entrypoint addQuestion = js/addQuestion-32ad630073c0654e2e2c.js js/addQuestion-32ad630073c0654e2e2c.js.map
+Entrypoint addTopic = js/addTopic-7254ab34429b2dcb1010.js js/addTopic-7254ab34429b2dcb1010.js.map
+Entrypoint allTopics = js/allTopics-86b6bbb527b867cc06a9.js js/allTopics-86b6bbb527b867cc06a9.js.map
+Entrypoint application = js/application-023479878d9c65e60450.js js/application-023479878d9c65e60450.js.map
+Entrypoint editQuestion = js/editQuestion-ad475656dee863b30456.js js/editQuestion-ad475656dee863b30456.js.map
+Entrypoint home = js/home-a99e7e109a5142abfbd0.js js/home-a99e7e109a5142abfbd0.js.map
+Entrypoint login = js/login-9b98fe5f4f78931f2277.js js/login-9b98fe5f4f78931f2277.js.map
+Entrypoint logout = js/logout-3af73a12c6eaf3b188fb.js js/logout-3af73a12c6eaf3b188fb.js.map
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/packs/addQuestion.js] 28 bytes {addQuestion} [built]
+[./app/javascript/packs/addTopic.js] 25 bytes {addTopic} [built]
+[./app/javascript/packs/allTopics.js] 26 bytes {allTopics} [built]
+[./app/javascript/packs/application.js] 758 bytes {application} [built]
+[./app/javascript/packs/editQuestion.js] 29 bytes {editQuestion} [built]
+[./app/javascript/packs/home.js] 21 bytes {home} [built]
+[./app/javascript/packs/login.js] 22 bytes {login} [built]
+[./app/javascript/packs/logout.js] 23 bytes {logout} [built]
+[./app/javascript/src/addQuestion.jsx] 944 bytes {addQuestion} [built]
+[./app/javascript/src/addTopic.jsx] 926 bytes {addTopic} [built]
+[./app/javascript/src/allTopics.jsx] 932 bytes {allTopics} [built]
+[./app/javascript/src/editQuestion.jsx] 950 bytes {editQuestion} [built]
+[./app/javascript/src/home.jsx] 901 bytes {home} [built]
+[./app/javascript/src/login.jsx] 908 bytes {login} [built]
+    + 19 hidden modules
+
+  Rendered static_pages/allTopics.html.erb within layouts/application (Duration: 8019.3ms | Allocations: 4516)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 8047ms (Views: 8045.9ms | ActiveRecord: 0.0ms | Allocations: 10340)
+
+
+Started GET "/editQuestion" for ::1 at 2021-01-13 12:13:58 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/editQuestion"):
+  
+actionpack (6.0.3.4) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+web-console (4.1.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.1.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.1.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.1.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.4) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+webpacker (4.3.0) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.3.4) lib/rails/engine.rb:527:in `call'
+puma (4.3.7) lib/puma/configuration.rb:228:in `call'
+puma (4.3.7) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.7) lib/puma/server.rb:472:in `process_client'
+puma (4.3.7) lib/puma/server.rb:328:in `block in run'
+puma (4.3.7) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/editQuestion" for ::1 at 2021-01-13 12:14:17 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/editQuestion"):
+  
+actionpack (6.0.3.4) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+web-console (4.1.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.1.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.1.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.1.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.4) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+webpacker (4.3.0) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.3.4) lib/rails/engine.rb:527:in `call'
+puma (4.3.7) lib/puma/configuration.rb:228:in `call'
+puma (4.3.7) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.7) lib/puma/server.rb:472:in `process_client'
+puma (4.3.7) lib/puma/server.rb:328:in `block in run'
+puma (4.3.7) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/editQuestion" for ::1 at 2021-01-13 12:14:22 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/editQuestion"):
+  
+actionpack (6.0.3.4) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+web-console (4.1.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.1.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.1.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.1.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.4) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+webpacker (4.3.0) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.3.4) lib/rails/engine.rb:527:in `call'
+puma (4.3.7) lib/puma/configuration.rb:228:in `call'
+puma (4.3.7) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.7) lib/puma/server.rb:472:in `process_client'
+puma (4.3.7) lib/puma/server.rb:328:in `block in run'
+puma (4.3.7) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/allTopics" for ::1 at 2021-01-13 12:14:50 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by StaticPagesController#allTopics as HTML
+  Rendering static_pages/allTopics.html.erb within layouts/application
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /Users/jason/projects/ruby_on_rails/study_helper/public/packs
+[Webpacker] Hash: b823c9fbd58a94690be4
+Version: webpack 4.46.0
+Time: 4887ms
+Built at: 01/13/2021 12:14:58 PM
+                                      Asset      Size        Chunks                         Chunk Names
+     js/addQuestion-0a3b6e0f64c611d08d58.js  1.07 MiB   addQuestion  [emitted] [immutable]  addQuestion
+ js/addQuestion-0a3b6e0f64c611d08d58.js.map  1.23 MiB   addQuestion  [emitted] [dev]        addQuestion
+        js/addTopic-e3134aa22705c8a8c52e.js  1.07 MiB      addTopic  [emitted] [immutable]  addTopic
+    js/addTopic-e3134aa22705c8a8c52e.js.map  1.23 MiB      addTopic  [emitted] [dev]        addTopic
+       js/allTopics-8ac284db25558d4a3dc1.js  1.07 MiB     allTopics  [emitted] [immutable]  allTopics
+   js/allTopics-8ac284db25558d4a3dc1.js.map  1.23 MiB     allTopics  [emitted] [dev]        allTopics
+     js/application-023479878d9c65e60450.js   757 KiB   application  [emitted] [immutable]  application
+ js/application-023479878d9c65e60450.js.map   794 KiB   application  [emitted] [dev]        application
+    js/editQuestion-6a494b15047e320f01b3.js  1.07 MiB  editQuestion  [emitted] [immutable]  editQuestion
+js/editQuestion-6a494b15047e320f01b3.js.map  1.23 MiB  editQuestion  [emitted] [dev]        editQuestion
+            js/home-de661ba11bb20d927283.js  1.07 MiB          home  [emitted] [immutable]  home
+        js/home-de661ba11bb20d927283.js.map  1.23 MiB          home  [emitted] [dev]        home
+           js/login-c051a729013aefc24e46.js  1.07 MiB         login  [emitted] [immutable]  login
+       js/login-c051a729013aefc24e46.js.map  1.23 MiB         login  [emitted] [dev]        login
+          js/logout-5440bbd0b93f1fb30644.js  1.07 MiB        logout  [emitted] [immutable]  logout
+      js/logout-5440bbd0b93f1fb30644.js.map  1.23 MiB        logout  [emitted] [dev]        logout
+                              manifest.json  2.52 KiB                [emitted]              
+Entrypoint addQuestion = js/addQuestion-0a3b6e0f64c611d08d58.js js/addQuestion-0a3b6e0f64c611d08d58.js.map
+Entrypoint addTopic = js/addTopic-e3134aa22705c8a8c52e.js js/addTopic-e3134aa22705c8a8c52e.js.map
+Entrypoint allTopics = js/allTopics-8ac284db25558d4a3dc1.js js/allTopics-8ac284db25558d4a3dc1.js.map
+Entrypoint application = js/application-023479878d9c65e60450.js js/application-023479878d9c65e60450.js.map
+Entrypoint editQuestion = js/editQuestion-6a494b15047e320f01b3.js js/editQuestion-6a494b15047e320f01b3.js.map
+Entrypoint home = js/home-de661ba11bb20d927283.js js/home-de661ba11bb20d927283.js.map
+Entrypoint login = js/login-c051a729013aefc24e46.js js/login-c051a729013aefc24e46.js.map
+Entrypoint logout = js/logout-5440bbd0b93f1fb30644.js js/logout-5440bbd0b93f1fb30644.js.map
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/packs/addQuestion.js] 28 bytes {addQuestion} [built]
+[./app/javascript/packs/addTopic.js] 25 bytes {addTopic} [built]
+[./app/javascript/packs/allTopics.js] 26 bytes {allTopics} [built]
+[./app/javascript/packs/application.js] 758 bytes {application} [built]
+[./app/javascript/packs/editQuestion.js] 29 bytes {editQuestion} [built]
+[./app/javascript/packs/home.js] 21 bytes {home} [built]
+[./app/javascript/packs/login.js] 22 bytes {login} [built]
+[./app/javascript/packs/logout.js] 23 bytes {logout} [built]
+[./app/javascript/src/addQuestion.jsx] 944 bytes {addQuestion} [built]
+[./app/javascript/src/addTopic.jsx] 926 bytes {addTopic} [built]
+[./app/javascript/src/allTopics.jsx] 932 bytes {allTopics} [built]
+[./app/javascript/src/editQuestion.jsx] 950 bytes {editQuestion} [built]
+[./app/javascript/src/home.jsx] 901 bytes {home} [built]
+[./app/javascript/src/login.jsx] 908 bytes {login} [built]
+    + 19 hidden modules
+
+  Rendered static_pages/allTopics.html.erb within layouts/application (Duration: 7941.8ms | Allocations: 4426)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 7962ms (Views: 7961.2ms | ActiveRecord: 0.0ms | Allocations: 9490)
+
+
+Started GET "/editQuestion/1" for ::1 at 2021-01-13 12:15:00 -0500
+Processing by StaticPagesController#editQuestion as HTML
+  Parameters: {"id"=>"1"}
+  Rendering static_pages/editQuestion.html.erb within layouts/application
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered static_pages/editQuestion.html.erb within layouts/application (Duration: 12.4ms | Allocations: 3048)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 27ms (Views: 26.5ms | ActiveRecord: 0.0ms | Allocations: 8076)
+
+
+Started GET "/" for ::1 at 2021-01-13 12:15:04 -0500
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 9.7ms | Allocations: 3041)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 24ms (Views: 24.0ms | ActiveRecord: 0.0ms | Allocations: 8071)
+
+
+  [1m[35m (1.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (2.1ms)[0m  [1m[32mINSERT INTO "users" ("username", "password", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["username", "jason"], ["password", "hello"], ["email", "455dreaming@gmail.com"], ["created_at", "2021-01-13 17:31:37.558748"], ["updated_at", "2021-01-13 17:31:37.558748"]]
+  [1m[35m (6.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTopic Create (3.5ms)[0m  [1m[32mINSERT INTO "topics" ("name", "high_score", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Ruby"], ["high_score", 0], ["user_id", 1], ["created_at", "2021-01-13 17:33:45.871512"], ["updated_at", "2021-01-13 17:33:45.871512"]]
+  [1m[35m (3.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mTopic Load (0.3ms)[0m  [1m[34mSELECT "topics".* FROM "topics" ORDER BY "topics"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]

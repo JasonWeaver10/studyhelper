@@ -10,4 +10,16 @@ class StaticPagesController < ApplicationController
   def logout 
     render 'logout'
   end
+
+  def addQuestion 
+    render 'addQuestion'
+  end
+
+  def addTopic 
+    render 'addTopic'
+  end
+
+  def allTopics 
+    render 'allTopics'
+  end
 end

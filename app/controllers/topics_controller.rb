@@ -2,7 +2,7 @@ class TopicsController < ApplicationController
   has_many :problems
 
   def index 
-    @topic = Topic.all
+    @topics = Topic.all
   end
 
   def show 
@@ -25,7 +25,7 @@ class TopicsController < ApplicationController
   private
   
   def topic_params 
-    params.require(:topic).permit(:high_score, :name)
+    params.require(:topic).permit(:high_score, :name, :user_id)
   end
 
 end

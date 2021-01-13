@@ -17,6 +17,18 @@ const Layout = (props) => {
             <li className="nav-item">
               <a className="nav-link" href="/logout">Logout</a>
             </li>
+            <li className="nav-item">
+              <a className="nav-link" href="/addQuestion">Add Question</a>
+            </li>
+            <li className="nav-item">
+              <a className="nav-link" href="/addTopic">Add Topic</a>
+            </li>
+            <li className="nav-item">
+              <a className="nav-link" href="/allTopics">All Topics</a>
+            </li>
+            <li className="nav-item">
+              <a className="nav-link" href="/editQuestion/1">Edit Question</a>
+            </li>
           </ul>
         </div>
       </nav>
