@@ -1,0 +1,32 @@
+.main-container {
+  display: flex;
+  flex-direction: row;
+
+  .main-content {
+    flex: 3;
+    border: 2px solid black;
+    margin: 10px;
+    padding: 10px;
+  }
+  .high-score {
+    flex: 1;
+    border: 2px solid black;
+    margin: 10px;
+    padding: 10px;
+    align-content: center;
+    button {
+      margin: 0 auto;
+      width: 40%;
+    }
+  }
+  .answer {
+    display: flex;
+    flex-direction: row;
+    border: 2px solid black;
+    padding: 5px;
+    margin: 5px;
+    .radio {
+      margin: 10px;
+    }
+  }
+}

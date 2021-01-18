@@ -1,5 +1,6 @@
 // layout.jsx
 import React from 'react';
+import './layout.scss';
 
 const Layout = (props) => {
   return (
@@ -10,12 +11,6 @@ const Layout = (props) => {
           <ul className="navbar-nav">
             <li className="nav-item">
               <a className="nav-link" href="/">Home</a>
-            </li>
-            <li className="nav-item">
-              <a className="nav-link" href="/login">Login</a>
-            </li>
-            <li className="nav-item">
-              <a className="nav-link" href="/logout">Logout</a>
             </li>
             <li className="nav-item">
               <a className="nav-link" href="/addQuestion">Add Question</a>
@@ -29,10 +24,13 @@ const Layout = (props) => {
             <li className="nav-item">
               <a className="nav-link" href="/editQuestion/1">Edit Question</a>
             </li>
+            <li className="nav-item">
+              <a className="nav-link" href="/logout">Logout</a>
+            </li>
           </ul>
         </div>
       </nav>
-      <div className="container py-3">
+      <div className="container py-2">
         {props.children}
       </div>
       <footer className="p-3 bg-light">
