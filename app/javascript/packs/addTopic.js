@@ -1,1 +1,1 @@
-import '../src/addTopic';
+import '@src/addTopic';

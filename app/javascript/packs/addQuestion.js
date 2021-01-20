@@ -1,1 +1,1 @@
-import '../src/addQuestion';
+import '@src/addQuestion';

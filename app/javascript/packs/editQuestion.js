@@ -1,1 +1,1 @@
-import '../src/editQuestion';
+import '@src/editQuestion';

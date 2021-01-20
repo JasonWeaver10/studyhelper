@@ -1,1 +1,1 @@
-import '../src/question';
+import '@src/question';
