@@ -18937,3 +18937,117 @@ Processing by Api::TopicsController#index as */*
 Completed 200 OK in 17ms (Views: 14.6ms | ActiveRecord: 0.4ms | Allocations: 2399)
 
 
+Started GET "/allTopics" for ::1 at 2021-01-19 19:27:53 -0500
+Processing by StaticPagesController#allTopics as HTML
+  Rendering static_pages/allTopics.html.erb within layouts/application
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered static_pages/allTopics.html.erb within layouts/application (Duration: 59.6ms | Allocations: 6581)
+Completed 200 OK in 87ms (Views: 85.6ms | ActiveRecord: 0.0ms | Allocations: 9635)
+
+
+Started GET "/api/topics" for ::1 at 2021-01-19 19:27:53 -0500
+Processing by Api::TopicsController#index as */*
+  Rendering api/topics/index.jbuilder
+  [1m[36mTopic Load (1.8ms)[0m  [1m[34mSELECT "topics".* FROM "topics" WHERE "topics"."name" = ?[0m  [["name", "Ruby"]]
+  ↳ app/views/api/topics/index.jbuilder:2
+  Rendered api/topics/index.jbuilder (Duration: 23.3ms | Allocations: 1188)
+Completed 200 OK in 40ms (Views: 28.6ms | ActiveRecord: 1.8ms | Allocations: 2758)
+
+
+Started GET "/addQuestion" for ::1 at 2021-01-19 19:27:55 -0500
+Processing by StaticPagesController#addQuestion as HTML
+  Rendering static_pages/addQuestion.html.erb within layouts/application
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered static_pages/addQuestion.html.erb within layouts/application (Duration: 49.0ms | Allocations: 6505)
+Completed 200 OK in 54ms (Views: 53.8ms | ActiveRecord: 0.0ms | Allocations: 8798)
+
+
+Started GET "/addTopic" for ::1 at 2021-01-19 19:27:56 -0500
+Processing by StaticPagesController#addTopic as HTML
+  Rendering static_pages/addTopic.html.erb within layouts/application
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered static_pages/addTopic.html.erb within layouts/application (Duration: 39.3ms | Allocations: 6505)
+Completed 200 OK in 46ms (Views: 45.2ms | ActiveRecord: 0.0ms | Allocations: 8808)
+
+
+Started GET "/editQuestion/1" for ::1 at 2021-01-19 19:27:58 -0500
+Processing by StaticPagesController#editQuestion as HTML
+  Parameters: {"id"=>"1"}
+  Rendering static_pages/editQuestion.html.erb within layouts/application
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered static_pages/editQuestion.html.erb within layouts/application (Duration: 42.0ms | Allocations: 6508)
+Completed 200 OK in 48ms (Views: 47.1ms | ActiveRecord: 0.0ms | Allocations: 8803)
+
+
+Started GET "/logout" for ::1 at 2021-01-19 19:27:59 -0500
+Processing by StaticPagesController#logout as HTML
+  Rendering static_pages/logout.html.erb within layouts/application
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered static_pages/logout.html.erb within layouts/application (Duration: 45.2ms | Allocations: 6505)
+Completed 200 OK in 50ms (Views: 49.7ms | ActiveRecord: 0.0ms | Allocations: 8808)
+
+
+Started GET "/addTopic" for ::1 at 2021-01-19 19:28:01 -0500
+Processing by StaticPagesController#addTopic as HTML
+  Rendering static_pages/addTopic.html.erb within layouts/application
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered static_pages/addTopic.html.erb within layouts/application (Duration: 37.6ms | Allocations: 6415)
+Completed 200 OK in 48ms (Views: 44.2ms | ActiveRecord: 0.0ms | Allocations: 8588)
+
+
+Started GET "/addTopic" for ::1 at 2021-01-19 19:31:52 -0500
+Processing by StaticPagesController#addTopic as HTML
+  Rendering static_pages/addTopic.html.erb within layouts/application
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered static_pages/addTopic.html.erb within layouts/application (Duration: 50.2ms | Allocations: 6510)
+Completed 500 Internal Server Error in 918ms (ActiveRecord: 0.0ms | Allocations: 80002)
+
+
+  
+ActionView::Template::Error (undefined method `styleshet_pack_tag' for #<#<Class:0x00007fcb9f843c68>:0x00007fcb9f8a6890>
+Did you mean?  stylesheet_pack_tag
+               stylesheet_link_tag):
+     6:     <%= csp_meta_tag %>
+     7: 
+     8:     <%= stylesheet_link_tag    'application', media: 'all' %>
+     9:     <%= styleshet_pack_tag 'application' %>
+    10:   </head>
+    11: 
+    12:   <body>
+  
+app/views/layouts/application.html.erb:9
+app/controllers/static_pages_controller.rb:19:in `addTopic'
+Started GET "/addTopic" for ::1 at 2021-01-19 19:32:08 -0500
+Processing by StaticPagesController#addTopic as HTML
+  Rendering static_pages/addTopic.html.erb within layouts/application
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered static_pages/addTopic.html.erb within layouts/application (Duration: 32.9ms | Allocations: 6505)
+Completed 200 OK in 41ms (Views: 40.5ms | ActiveRecord: 0.0ms | Allocations: 9600)
+
+
+Started GET "/addQuestion" for ::1 at 2021-01-19 19:32:14 -0500
+Processing by StaticPagesController#addQuestion as HTML
+  Rendering static_pages/addQuestion.html.erb within layouts/application
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered static_pages/addQuestion.html.erb within layouts/application (Duration: 41.3ms | Allocations: 6505)
+Completed 200 OK in 58ms (Views: 56.8ms | ActiveRecord: 0.0ms | Allocations: 8810)
+
+
+Started GET "/addTopic" for ::1 at 2021-01-19 19:32:16 -0500
+Processing by StaticPagesController#addTopic as HTML
+  Rendering static_pages/addTopic.html.erb within layouts/application
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered static_pages/addTopic.html.erb within layouts/application (Duration: 28.5ms | Allocations: 6415)
+Completed 200 OK in 33ms (Views: 32.8ms | ActiveRecord: 0.0ms | Allocations: 8586)
+
+
