@@ -13,7 +13,7 @@ Rails.application.routes.draw do
   namespace 'api' do 
     resources :users, only: [:create]
     resources :topics
-    resources :questions
+    resources :problems
     resources :sessions, only: [:create, :destroy]
   end
   

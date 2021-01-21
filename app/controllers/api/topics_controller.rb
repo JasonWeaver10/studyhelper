@@ -1,7 +1,7 @@
 module Api
   class TopicsController < ApplicationController
     def index 
-      @topics = Topic.where(name: "Ruby")
+      @topics = Topic.all
       return render json: { error: 'not_found' }, status: :not_found if !@topics
       render 'api/topics/index', status: :ok
     end

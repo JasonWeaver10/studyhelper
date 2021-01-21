@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_01_13_153409) do
+ActiveRecord::Schema.define(version: 2021_01_20_161030) do
 
   create_table "problems", force: :cascade do |t|
     t.string "answer"
@@ -21,6 +21,7 @@ ActiveRecord::Schema.define(version: 2021_01_13_153409) do
     t.integer "topic_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.string "hint"
     t.index ["topic_id"], name: "index_problems_on_topic_id"
   end
 

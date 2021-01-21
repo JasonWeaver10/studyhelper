@@ -1,8 +1,11 @@
 .main-container {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
+  min-height: 80vh;
+  background-image: url('../../assets/images/chuttersnap-f39ab9Rrx0Q-unsplash.jpg');
+  background-size: cover;
   .main-content {
-    flex: 3;
+    max-height: 30vh;
     background-color: rgba(179,207,221,.50);
     border: 2px solid black;
     margin: 10px;
@@ -10,36 +13,24 @@
   }
   .answer {
     background-color: white;
-    display: flex;
     flex-direction: column;
     border: 2px solid black;
     padding: 10px;
     margin: 10px;
     textarea {
+      margin-top: 2px;
       width: 100%;
     }
   }
-  .side-panel {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    .top-spacer {
-      padding: 10px;
-      margin-top: 20%;
-      flex: 3;
-      background-image: url('../../assets/images/gaelle-marcel-L8SNwGUNqbU-unsplash.jpg');
-      background-size: cover;
+  .button-div {
+    flex: .5;
+    padding: 20px;
+    button {
+      padding: 15px;
+      margin-right: 40%;
+      margin-left: 40%;
     }
-    .button-div {
-      margin: 0 auto;
-      flex: 1;
-      justify-content: center;
-      padding: 10px;
-      button {
-        margin-top: 50%;
-        padding: 10px;
-      }
-    }
-    
   }
 }
+   
+    

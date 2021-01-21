@@ -26,7 +26,7 @@ module Api
     private
     
     def problem_params 
-      params.require(:problem).permit(:answer, :wrong_answer_1, :wrong_answer_2, :wrong_answer_3, :question)
+      params.require(:problem).permit(:answer, :wrong_answer_1, :wrong_answer_2, :wrong_answer_3, :question, :hint, :topic_id)
     end
   end
 end

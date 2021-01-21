@@ -8,6 +8,12 @@
     margin: 10px;
     padding: 10px;
   }
+  .topic-select {
+    h4 {
+      display: inline-block;
+      margin-right: 20px;
+    }
+  }
   .answer {
     background-color: white;
     display: flex;
@@ -16,6 +22,7 @@
     padding: 10px;
     margin: 10px;
     textarea {
+      margin-top: 2px;
       width: 100%;
     }
   }
