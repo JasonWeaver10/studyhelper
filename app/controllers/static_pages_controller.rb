@@ -11,6 +11,10 @@ class StaticPagesController < ApplicationController
     render 'logout'
   end
 
+  def questions
+    render 'questions'
+  end
+
   def addQuestion 
     render 'addQuestion'
   end
@@ -21,5 +25,9 @@ class StaticPagesController < ApplicationController
 
   def allTopics 
     render 'allTopics'
+  end
+
+  def quizSelector 
+    render 'quizSelector'
   end
 end

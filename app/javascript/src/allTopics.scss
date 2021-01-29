@@ -1,30 +1,52 @@
 .main-container {
   display: flex;
   flex-direction: row;
-
+  min-height: 80vh;
   .main-content {
+    background-image: url('../../assets/images/nguyen-dang-hoang-nhu-cbEvoHbJnIE-unsplash.jpg');
+      background-size: cover;
     flex: 3;
     border: 2px solid black;
     margin: 10px;
     padding: 10px;
   }
   .high-score {
+    background-image: url('../../assets/images/notebook.png');
+    background-repeat: repeat;
     flex: 1;
     border: 2px solid black;
     margin: 10px;
     padding: 10px;
     align-content: center;
+    .photo-div {
+      height: 40%;
+    }
+    
     button {
-      margin: 0 auto;
-      width: 40%;
+      margin-left: 25%;
+      margin-right: 25%;
+      width: 50%;
     }
   }
+  .answer .rounded {
+    border-top-right-radius: 50px;
+    border-top-left-radius: 50px;
+  }  
+  .heading-div {
+    background-color: rgba(179,207,221,.50);
+    padding: 5%;
+  }
   .answer {
+    background-color: white;
     display: flex;
     flex-direction: row;
     border: 2px solid black;
     padding: 5px;
     margin: 5px;
+    .rounded {
+      border-top-right-radius: 50px;
+      border-top-left-radius: 50px;
+    }  
     .radio {
       margin: 10px;
     }

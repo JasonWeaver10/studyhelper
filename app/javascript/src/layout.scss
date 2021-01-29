@@ -1,3 +1,32 @@
+.nav-link {
+  border-bottom: 2px solid rgba(1,1,1,0);
+}
 .nav-link:hover {
   border-bottom: 2px solid black;
+}
+
+.logoImage {
+  width: 200px;
+  height: 60px;
+  background-image: url('../../assets/images/studyLogo.png');
+  background-size: cover;
+  border-radius: 20px;
+  border: 5px solid rgb(179,207,221);
+}
+
+.logoImage:hover {
+  border: 5px solid black;
+}
+
+.footer {
+  display: flex;
+  flex-direction: row;
+  background-color: rgba(179,207,221, .8);
+  .footer-links{
+    margin-top: 2%;
+    flex: 1;
+    li {
+      font-size: .8em;
+    }
+  }
 }

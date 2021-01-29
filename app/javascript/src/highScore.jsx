@@ -7,17 +7,29 @@ class HighScore extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      topics: {},
-      topic: ""
+      topics: [],
     }
+    this.renderHighScores = this.renderHighScores.bind(this);
   } 
 
   componentDidMount() {
-    fetch('./api/topics')
+    fetch('https://jasonsstudyhelper.herokuapp.com/api/topics')
       .then(response => response.json())
       .then(data => {
-        this.setState({topics: data.topics, hello: data.topics[0].name})
+        this.setState({ topics: data.topics })
        })
+  }
+
+  renderHighScores() {
+      const { topics } = this.state
+      if (!topics) return null
+      const result = []
+      topics.forEach(topic => {
+        result.push(
+          <li key={topic.id}>{topic.name}: {topic.high_score}</li>
+        )
+      });
+      return result;  
   }
 
   render(){
@@ -26,15 +38,7 @@ class HighScore extends React.Component {
       <div className="high-score-div">
         <h3 className="title">High Scores:</h3>
         <ul>
-          <li>
-            <p>{this.state.topic}</p>
-          </li>
-          <li>
-            <p>Topic 2</p>
-          </li>
-          <li>
-            <p>hello</p>
-          </li>
+          {this.renderHighScores()}
         </ul>
       </div>
     )

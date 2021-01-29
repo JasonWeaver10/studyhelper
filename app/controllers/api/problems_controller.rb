@@ -1,25 +1,59 @@
 module Api
   class ProblemsController < ApplicationController
 
-
     def index 
-      @problem = Problem.all
+      @problems = Problem.all
+      if !@problems
+        render json: { success: false }, status: :bad_request
+      else
+        render status: :ok
+      end
     end
 
     def show 
-      @problem = Problem.find(params[:id])
+      @problem = Problem.find_by(id: params[:id])
+      if !@problem 
+        render json: { success: false }, status: :bad_request
+      else
+        render status: :ok
+      end
+    end
+
+    def topicProblems
+      @problems = Problem.where(topic_id: params[:topic_id])
+
+      if !@problems 
+        render json: { success: false }, status: :bad_request
+      else
+        render status: :ok
+      end
     end
 
     def create 
       @problem = Problem.create(problem_params)
+      if @problem.save
+        render status: :ok
+      else 
+        render json: { success: false }, status: :bad_request
+      end
     end
 
     def update 
-      @problem = Problem.update(problem_params)
+      @problem = Problem.find_by(id: params[:id])
+      if @problem.update(problem_params)
+        render status: :ok
+      else 
+        render json: { success: false }, status: :bad_request
+      end
     end
 
-    def delete 
-      
+    def destroy
+      @problem = Problem.find_by(id: params[:id])
+      if @problem.destroy
+        render status: :ok
+      else 
+        render json: { success: false }, status: :bad_request
+      end
     end
 
 

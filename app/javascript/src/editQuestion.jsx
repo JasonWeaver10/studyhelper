@@ -2,25 +2,65 @@
 import React,  { Component } from 'react';
 import ReactDOM, { render } from 'react-dom';
 import Layout from './layout';
+import { safeCredentials } from '@utils/fetchHelper';
 import './editQuestion.scss';
 
 class EditQuestion extends Component {
   constructor() {
     super();
     this.state= {
-      question: "What is 3 * 4?",
+      question: '',
       correct: '',
       false1: '',
       false2: '',
       false3: '',
+      hint: '',
+      id: 0,
     }
+    this.handleSubmit = this.handleSubmit.bind(this);
+    this.handleChange = this.handleChange.bind(this);
+  }
 
-    this.handleChange = this.handleChange.bind(this)
+  componentDidMount() {
+    const str = window.location.href
+    const id = str.replace('http://localhost:3000/editQuestion/', "");
+    console.log(id)
+    fetch(`http://localhost:3000/api/problems/${id}`, safeCredentials({
+
+    }))
+    .then((response) => response.json())
+    .then((data) => {
+      this.setState({
+        question: data.problem.question,
+        correct: data.problem.answer,
+        false1: data.problem.wrong_answer_1,
+        false2: data.problem.wrong_answer_2,
+        false3: data.problem.wrong_answer_3,
+        hint: data.problem.hint,
+        id: id,
+      })
+    })
   }
 
   handleChange(e) {
    const name = e.target.id
    this.setState({[`${name}`]: e.target.value});
+  }
+
+  handleSubmit() {
+    const id = this.state.id
+    const data = {
+      question: this.state.question,
+      answer: this.state.correct,
+      wrong_answer_1: this.state.false1,
+      wrong_answer_2: this.state.false2,
+      wrong_answer_3: this.state.false3,
+      hint: this.state.hint,
+    }
+    fetch('http://localhost:3000/api/problems/'+ id , safeCredentials({
+      method: "PUT",
+      body: JSON.stringify(data)
+    }))
   }
 
 
@@ -60,12 +100,18 @@ class EditQuestion extends Component {
               value={this.state.false3}
               onChange={this.handleChange}/>
             </div>
+            <div className="answer">
+              <label htmlFor="hint">Hint</label>
+              <textarea type="textarea" id="hint"
+              value={this.state.hint}
+              onChange={this.handleChange}/>
+            </div>
           </div> 
           <div className="side-panel">
             <div className="top-spacer">
             </div>
             <div className="button-div">
-              <button className="btn btn-success">Update Question</button>
+              <button className="btn btn-success" onClick={this.handleSubmit}>Update Question</button>
             </div>
           </div> 
         </div>

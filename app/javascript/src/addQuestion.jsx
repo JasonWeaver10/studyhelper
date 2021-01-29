@@ -30,6 +30,7 @@ class AddQuestion extends Component {
     }))
     .then((response) => response.json())
     .then((data) => {
+      console.log(data);
       this.setState({ topics: data.topics })
       });
   };
@@ -45,7 +46,7 @@ class AddQuestion extends Component {
     const result = []
     topics.forEach(topic => {
       result.push(
-        <option value={topic.name}>{topic.name}</option>
+        <option value={topic.id} key={topic.id}>{topic.name}</option>
       )
     });
     return result;
@@ -53,7 +54,7 @@ class AddQuestion extends Component {
 
   handleSelect(e) {
     const topic_id = e.target.value
-    this.setState({ topic_id: 1})
+    this.setState({ topic_id: topic_id})
     console.log(topic_id)
   }
 
