@@ -56,6 +56,23 @@ module Api
       end
     end
 
+    def userQuestions 
+      @topics = Topic.where(user_id: params[:id])
+      topic_ids = []
+
+      @topics.each do |topic|
+        topic_ids.push(topic.id)
+      end
+
+      @problems = Problem.where(topic_id: topic_ids )
+      if !@problems 
+        render json: { success: false }, status: :bad_request
+      else
+        render status: :ok
+      end
+
+    end
+
 
     private
     

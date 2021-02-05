@@ -22,6 +22,16 @@ module Api
       
     end
 
+    def userTopics 
+      @topics = Topic.where(user_id: params[:id])
+      if !@topics
+        render json: { success: false }, status: :bad_request
+      else
+        render status: :ok
+      end
+
+    end
+
 
     private
     

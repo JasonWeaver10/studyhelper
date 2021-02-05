@@ -11,4 +11,16 @@
       margin-top: 10px;
     }
   }
+  .logged-in {
+    background-image: url('../../assets/images/patrick-tomasso-Oaqk7qqNh_c-unsplash.jpg');
+    background-size: cover;
+    min-height: 40vh;
+    text-align: center;
+    border: 2px solid black;
+    .h1-wrapper {
+      background-color: rgba(179,207,221, .8);
+      height: 30%;
+      padding: 5%;
+    }
+  }
 }

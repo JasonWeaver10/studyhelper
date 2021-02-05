@@ -24,7 +24,6 @@ class EditQuestion extends Component {
   componentDidMount() {
     const str = window.location.href
     const id = str.replace('http://localhost:3000/editQuestion/', "");
-    console.log(id)
     fetch(`http://localhost:3000/api/problems/${id}`, safeCredentials({
 
     }))
@@ -47,7 +46,7 @@ class EditQuestion extends Component {
    this.setState({[`${name}`]: e.target.value});
   }
 
-  handleSubmit() {
+  async handleSubmit() {
     const id = this.state.id
     const data = {
       question: this.state.question,
@@ -57,10 +56,11 @@ class EditQuestion extends Component {
       wrong_answer_3: this.state.false3,
       hint: this.state.hint,
     }
-    fetch('http://localhost:3000/api/problems/'+ id , safeCredentials({
+     await fetch('http://localhost:3000/api/problems/'+ id , safeCredentials({
       method: "PUT",
       body: JSON.stringify(data)
     }))
+    window.location = '/questions'
   }
 
 

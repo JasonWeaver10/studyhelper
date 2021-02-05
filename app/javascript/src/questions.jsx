@@ -10,19 +10,33 @@ class Questions extends React.Component {
     super(props);
     this.state = {
       problems: [],
+      user_id: 0
     }
     this.handleEdit = this.handleEdit.bind(this);
     this.renderQuestions = this.renderQuestions.bind(this);
     this.handleDelete = this.handleDelete.bind(this);
   } 
 
-  componentDidMount(){
-    fetch('./api/problems', safeCredentials({
+  async componentDidMount(){
+    await fetch('./api/authenticated', safeCredentials({
     }))
     .then((response) => response.json())
     .then((data) => {
-      this.setState({ problems: data.problems})
-    })
+      if (data.authenticated == false) {
+        window.location = "/"
+      } else {
+        this.setState({
+          user_id: data.session.id
+        })
+        const user_id = this.state.user_id
+        fetch('./api/userQuestions/' + user_id, safeCredentials({
+        }))
+        .then((response) => response.json())
+        .then((data) => {
+          this.setState({ problems: data.problems})
+        })
+      } 
+    })  
   }
 
   handleEdit(e) {
@@ -30,11 +44,12 @@ class Questions extends React.Component {
     window.location = './editQuestion/' + `${editId}`
   }
 
-  handleDelete(e) {
+  async handleDelete(e) {
     const deleteId = e.target.id
-    fetch('http://localhost:3000/api/problems/' + `${deleteId}`, safeCredentials({
+    await fetch('http://localhost:3000/api/problems/' + `${deleteId}`, safeCredentials({
       method: 'DELETE'
     }))
+    window.location = '/questions'
   }
 
   renderQuestions() {

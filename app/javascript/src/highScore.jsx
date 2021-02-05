@@ -13,7 +13,7 @@ class HighScore extends React.Component {
   } 
 
   componentDidMount() {
-    fetch('https://jasonsstudyhelper.herokuapp.com/api/topics')
+    fetch('http://localhost:3000/api/topics')
       .then(response => response.json())
       .then(data => {
         this.setState({ topics: data.topics })

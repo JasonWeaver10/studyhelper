@@ -18,6 +18,9 @@ Rails.application.routes.draw do
     resources :topics
     resources :problems
     resources :sessions, only: [:create, :destroy]
+    get '/userQuestions/:id' => 'problems#userQuestions'
+    get '/userTopics/:id' => 'topics#userTopics'
+    get '/authenticated' => 'sessions#authenticated'
 
     get '/topicProblems/:id' => 'problems#topicProblems'
   end

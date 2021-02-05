@@ -17,7 +17,8 @@ class AddQuestion extends Component {
       false3: '',
       hint: '',
       topic_id: 0,
-      topics: []
+      topics: [],
+      user_id: 0
     }
     this.handleSubmit = this.handleSubmit.bind(this);
     this.handleChange = this.handleChange.bind(this);
@@ -25,14 +26,28 @@ class AddQuestion extends Component {
     this.handleSelect = this.handleSelect.bind(this);
   };
 
-  componentDidMount() {
-    fetch("./api/topics", safeCredentials({
-    }))
-    .then((response) => response.json())
-    .then((data) => {
-      console.log(data);
-      this.setState({ topics: data.topics })
-      });
+  async componentDidMount() {
+      await fetch('./api/authenticated', safeCredentials({
+      }))
+      .then((response) => response.json())
+      .then((data) => {
+        this.setState({
+          user_id: data.session.id
+        })
+      })
+      .then()
+      const user_id = this.state.user_id
+        fetch("./api/userTopics/" + user_id, safeCredentials({
+        }))
+        .then((response) => response.json())
+        .then((data) => {
+          console.log(data);
+          this.setState({ 
+            topics: data.topics,
+            topic_id: data.topics[0].id
+           })
+
+          });
   };
 
   handleChange(e) {
@@ -55,10 +70,10 @@ class AddQuestion extends Component {
   handleSelect(e) {
     const topic_id = e.target.value
     this.setState({ topic_id: topic_id})
-    console.log(topic_id)
+    console.log(topic_id);
   }
 
-  handleSubmit(e) {
+  async handleSubmit(e) {
     e.preventDefault();
     const data = {
       question: this.state.question,
@@ -67,13 +82,14 @@ class AddQuestion extends Component {
       wrong_answer_2: this.state.false2,
       wrong_answer_3: this.state.false3,
       hint: this.state.hint,
-      topic_id: this.state.topic_id
+      topic_id: this.state.topic_id,
     };
 
-    fetch('./api/problems', safeCredentials({
+    await fetch('./api/problems', safeCredentials({
       method: "POST",
       body: JSON.stringify(data)
     }));
+    window.location = '/questions'
   };
 
 

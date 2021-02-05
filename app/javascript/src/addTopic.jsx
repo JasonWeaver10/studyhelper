@@ -9,6 +9,7 @@ class AddTopic extends Component {
   constructor() {
     super();
     this.state= {
+      user_id: 0,
       topic: '',
       question: "",
       correct: '',
@@ -20,22 +21,34 @@ class AddTopic extends Component {
     this.handleChange = this.handleChange.bind(this);
   }
 
+  componentDidMount() {
+    fetch('./api/authenticated', safeCredentials({
+    }))
+    .then((response) => response.json())
+    .then((data) => {
+      this.setState({
+        user_id: data.session.id
+      })
+    })
+  }
+
   handleChange(e) {
    const name = e.target.id
    this.setState({[`${name}`]: e.target.value});
   }
 
-  handleSubmit(e) {
+  async handleSubmit(e) {
     e.preventDefault();
     const data = {
       name: this.state.topic,
       high_score: 0,
-      user_id: 1
+      user_id: this.state.user_id
     }
-    fetch('./api/topics', safeCredentials({
+    await fetch('./api/topics', safeCredentials({
       method: "POST",
       body: JSON.stringify(data)
     }) )
+    window.location = '/addQuestion'
   }
 
 

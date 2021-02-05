@@ -19,7 +19,7 @@ const Layout = (props) => {
               <a className="nav-link" href="/quizType">Start Quiz</a>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="/questions">All Questions</a>
+              <a className="nav-link" href="/questions">Edit Questions</a>
             </li>
             <li className="nav-item">
               <a className="nav-link" href="/logout">Logout</a>
@@ -49,6 +49,7 @@ const Layout = (props) => {
             <li>Edit Question Page Image: David Pennington</li>
             <li>All Questions Page Image: Nick Fewings</li>
             <li>Log-out image: Muhammed Jiyadh</li>
+            <li>Quiz image: Nguyen Dang Hoang</li>
           </ul>
       </footer>
     </React.Fragment>
