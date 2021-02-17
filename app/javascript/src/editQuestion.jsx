@@ -23,8 +23,8 @@ class EditQuestion extends Component {
 
   componentDidMount() {
     const str = window.location.href
-    const id = str.replace('http://localhost:3000/editQuestion/', "");
-    fetch(`http://localhost:3000/api/problems/${id}`, safeCredentials({
+    const id = str.replace('https://jasonsstudyhelper.herokuapp.com/editQuestion/', "");
+    fetch(`./api/problems/${id}`, safeCredentials({
 
     }))
     .then((response) => response.json())
@@ -56,7 +56,7 @@ class EditQuestion extends Component {
       wrong_answer_3: this.state.false3,
       hint: this.state.hint,
     }
-     await fetch('http://localhost:3000/api/problems/'+ id , safeCredentials({
+     await fetch('./api/problems/'+ id , safeCredentials({
       method: "PUT",
       body: JSON.stringify(data)
     }))
@@ -67,7 +67,6 @@ class EditQuestion extends Component {
   render() {
     return (
       <Layout>
-        <h1>Edit Question </h1>
         <div className="container main-container">
           <div className="main-content">
             <div className="answer">

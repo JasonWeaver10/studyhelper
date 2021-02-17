@@ -20,8 +20,7 @@ module Api
     end
 
     def topicProblems
-      @problems = Problem.where(topic_id: params[:topic_id])
-
+      @problems = Problem.where(topic_id: params[:id])
       if !@problems 
         render json: { success: false }, status: :bad_request
       else

@@ -2,8 +2,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import Layout from './layout';
-import HighScore from './highScore';
-import QuestionWidget from './questionWidget';
+import QuestionLayout from './questionLayout';
 import { safeCredentials } from '@utils/fetchHelper';
 import './oneTopic.scss';
 
@@ -11,57 +10,89 @@ class OneTopic extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      problems: [],
-      question: '',
-      answer: '',
-      false1: '',
-      false2: '',
-      false3: '',
-      hint: '',
-      selection: '',
+      shuffled: [],
+      loading: true,
+      quizable: true,
+      high_score: 0
     }
-    this.handleSubmit = this.handleSubmit.bind(this);
-    this.handleChange = this.handleChange.bind(this);
+    this.handleReset = this.handleReset.bind(this);
   } 
 
-  componentDidMount() {
-    fetch('http://localhost:3000/api/topicProblems/1', safeCredentials({
+    async componentDidMount(){
+      const queryString = window.location.search;
+      const urlParams = new URLSearchParams(queryString);
+      const topic = urlParams.get('t')
+        await fetch('../api/topicProblems/' + topic, safeCredentials({
+        }))
+        .then((response) => response.json())
+        .then((data) => {
+          this.setState({problems: data.problems})
+        })
+        await fetch('../api/topics/' + topic, safeCredentials({
+        }))
+        .then((response) => response.json())
+        .then((data) => {
+          this.setState({high_score: data.topic.high_score})
+        })
+        if (this.state.problems.length > 1) {
+          let unshuffled = this.state.problems
+          let shuffled = unshuffled
+          .map((a) => ({sort: Math.random(), value: a}))
+          .sort((a, b) => a.sort - b.sort)
+          .map((a) => a.value)
+        this.setState({
+          shuffled: shuffled,
+          loading: false
+        })  
+        } else {
+          this.setState({
+            quizable: false
+          })
+        }
+        
+      }
 
-    }))
-    .then((response) => response.json())
-    .then((data) => {
-      this.setState({ 
-        problems: data.problems,
-        question: data.problems[0].question,
-        answer: data.problems[0].answer,
-        false1: data.problems[0].wrong_answer_1,
-        false2: data.problems[0].wrong_answer_2,
-        false3: data.problems[0].wrong_answer_3,
-      })
-    })
-  }
-
-  handleChange(e) {
-
-  }
-
-  handleSubmit(e) {
-
-  }
-
+      handleReset(){
+        window.location = '../quizType';
+      }
+    
   render(){
-    return (
-      <Layout>
-        <div className="container main-container">
-          <QuestionWidget/>
-          <div className="high-score">
-            <HighScore/>
-            <button className="btn btn-success" onClick={this.handleSubmit}> Submit</button>
-          </div>
+    if (this.state.quizable == true) {
+
+      if (this.state.loading == true) {
+        return (
+          <Layout>
+            <div className="main-container">
+              <div className="main-content">
+                <div className="finished">
+                  <h3>Loading...</h3>
+                </div>
+              </div>
+            </div>
+          </Layout>
+        )
+      } else {
+        return (
+          <Layout>
+            <QuestionLayout
+              problems={this.state.shuffled}
+              handleReset = {this.handleReset}
+              high_score={this.state.high_score}
+            />
+          </Layout> 
+      ) 
+      }
+    } else {
+      return (
+        <Layout>
+        <div>
+          <h3>"This Topic does not have enough questions to test yet!"</h3>
+          <button onClick={this.handleReset}>Back to Quiz Selection</button>
         </div>
       </Layout>
-    )
-  }
+      )
+    }
+  }       
 }
 
 document.addEventListener('DOMContentLoaded', () => {

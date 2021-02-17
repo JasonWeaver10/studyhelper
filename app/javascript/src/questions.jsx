@@ -46,7 +46,7 @@ class Questions extends React.Component {
 
   async handleDelete(e) {
     const deleteId = e.target.id
-    await fetch('http://localhost:3000/api/problems/' + `${deleteId}`, safeCredentials({
+    await fetch('./api/problems/' + `${deleteId}`, safeCredentials({
       method: 'DELETE'
     }))
     window.location = '/questions'

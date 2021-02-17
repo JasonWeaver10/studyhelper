@@ -15,7 +15,12 @@ module Api
     end
 
     def update 
-      @topic = Topic.update(topic_params)
+      @topic = Topic.find(params[:id])
+      if @topic.update(topic_params)
+        render status: :ok
+      else 
+        render json: { success: false }, status: :bad_request
+      end
     end
 
     def delete 

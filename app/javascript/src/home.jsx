@@ -3,7 +3,6 @@ import React from 'react';
 import ReactDOM, { render } from 'react-dom';
 import Layout from './layout';
 import './home.scss';
-import image from '../../assets/images/windows-v94mlgvsza4-unsplash.jpg'
 
 class Home extends React.Component {
   constructor(){

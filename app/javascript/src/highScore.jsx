@@ -13,7 +13,7 @@ class HighScore extends React.Component {
   } 
 
   componentDidMount() {
-    fetch('http://localhost:3000/api/topics')
+    fetch('../api/topics')
       .then(response => response.json())
       .then(data => {
         this.setState({ topics: data.topics })
@@ -37,6 +37,7 @@ class HighScore extends React.Component {
 
       <div className="high-score-div">
         <h3 className="title">High Scores:</h3>
+        <hr></hr>
         <ul>
           {this.renderHighScores()}
         </ul>

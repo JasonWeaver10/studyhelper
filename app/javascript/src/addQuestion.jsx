@@ -41,7 +41,6 @@ class AddQuestion extends Component {
         }))
         .then((response) => response.json())
         .then((data) => {
-          console.log(data);
           this.setState({ 
             topics: data.topics,
             topic_id: data.topics[0].id
@@ -70,7 +69,6 @@ class AddQuestion extends Component {
   handleSelect(e) {
     const topic_id = e.target.value
     this.setState({ topic_id: topic_id})
-    console.log(topic_id);
   }
 
   async handleSubmit(e) {
@@ -96,7 +94,6 @@ class AddQuestion extends Component {
   render() {
     return (
       <Layout>
-        <h1>Add A New Question </h1>
         <div className="container main-container">
           <div className="main-content">
             <div className="topic-select">

@@ -55,7 +55,6 @@ class AddTopic extends Component {
   render() {
     return (
       <Layout>
-        <h1>Add A New Topic </h1>
         <div className="container main-container">
           <div className="main-content">
             <div className="answer">

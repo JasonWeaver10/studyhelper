@@ -10,7 +10,7 @@ class QuizSelector extends React.Component {
     super(props);
     this.state = {
       topics: [],
-      topicChoice: '',
+      topicChoice: 1,
       allTopics: false
     }
     this.selectOne = this.selectOne.bind(this);
@@ -21,7 +21,7 @@ class QuizSelector extends React.Component {
   } 
 
   componentDidMount() {
-    fetch('http://localhost:3000/api/topics', safeCredentials({
+    fetch('./api/topics', safeCredentials({
 
     }))
     .then((response) => response.json())
@@ -45,17 +45,15 @@ class QuizSelector extends React.Component {
   } 
   
   handleChange(e) {
-    this.setState({topicChoice: e.target.id});
+    this.setState({topicChoice: e.target.value});
   }
 
   selectAll(e) {
     this.setState({ allTopics: true})
-    console.log(this.state.allTopics);
   }
 
   selectOne(e) {
     this.setState({ allTopics: false })
-    console.log(this.state.allTopics);
   }
 
 
@@ -63,7 +61,7 @@ class QuizSelector extends React.Component {
     if (this.state.allTopics == true) {
       window.location = './allTopics';
     } else {
-      window.location = `./oneTopic/${this.state.topicChoice}`
+      window.location = `./oneTopic/` + "?t="+`${this.state.topicChoice}`
     }
   }
 
