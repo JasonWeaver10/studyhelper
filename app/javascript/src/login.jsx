@@ -51,7 +51,7 @@ class Login extends React.Component {
       method: 'POST',
       body: JSON.stringify(data)
     }));
-     window.location = '/addTopic'
+     window.location = '/quizType'
   }
 
   toggleLogin(e) {
@@ -75,7 +75,7 @@ class Login extends React.Component {
       body: JSON.stringify(data)
     }));
     await this.handleLogin();
-    window.location = '/addTopic'
+    window.location = '/quizType'
   }
 
   render() {
