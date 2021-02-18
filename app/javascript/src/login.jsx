@@ -22,7 +22,7 @@ class Login extends React.Component {
   } 
    
   componentDidMount(){
-    fetch('./api/authenticated', safeCredentials({
+    fetch('../api/authenticated', safeCredentials({
     }))
     .then((response) => response.json())
     .then((data) => {
@@ -34,6 +34,12 @@ class Login extends React.Component {
         })
       }
     })
+    const queryString = window.location.search;
+    const urlParams = new URLSearchParams(queryString);
+    const loginType = urlParams.get('l')
+    if (loginType == "r") {
+      this.setState({login: true})
+    }
   } 
 
   async handleLogin(){
@@ -41,7 +47,7 @@ class Login extends React.Component {
       password: this.state.password,
       email: this.state.email
     }
-    await fetch('./api/sessions', safeCredentials({
+    await fetch('../api/sessions', safeCredentials({
       method: 'POST',
       body: JSON.stringify(data)
     }));
