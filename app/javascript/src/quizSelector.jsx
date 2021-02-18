@@ -10,7 +10,7 @@ class QuizSelector extends React.Component {
     super(props);
     this.state = {
       topics: [],
-      topicChoice: 1,
+      topicChoice: 3,
       allTopics: false
     }
     this.selectOne = this.selectOne.bind(this);
