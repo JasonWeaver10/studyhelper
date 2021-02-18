@@ -1,7 +1,6 @@
 // questionWidget.jsx
 import React from 'react';
 import './questionWidget.scss';
-import Hint from './hint';
 
 
 class QuestionWidget extends React.Component {
@@ -53,15 +52,10 @@ class QuestionWidget extends React.Component {
             </div>
             <div className="answer-content">
               {this.renderAnswers()}
-              <Hint 
-              hint={this.props.hint}
-              key={this.props.hint}
-              />
             </div>
           </div>
     )
   }
-
 }
 
 export default QuestionWidget;

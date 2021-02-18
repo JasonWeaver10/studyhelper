@@ -52,8 +52,7 @@ class OneTopic extends React.Component {
           this.setState({
             quizable: false
           })
-        }
-        
+        } 
       }
 
       handleReset(){

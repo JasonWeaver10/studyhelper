@@ -5,6 +5,7 @@ import HighScore from './highScore';
 import QuestionWidget from './questionWidget';
 import './questionLayout.scss';
 import { safeCredentials } from '@utils/fetchHelper';
+import Hint from './hint';
 
 class QuestionLayout extends React.Component {
   constructor(props) {
@@ -12,10 +13,10 @@ class QuestionLayout extends React.Component {
     this.state = {
       problems: [],
       question: '',
-      answer: '',
-      false1: '',
-      false2: '',
-      false3: '',
+      answer: '0',
+      false1: '1',
+      false2: '2',
+      false3: '3',
       hint: '',
       selection: '',
       questionNum: 1,
@@ -23,6 +24,7 @@ class QuestionLayout extends React.Component {
       finished: false,
       correct: 0,
       answered: false,
+      result: ''
     }
     this.handleNext = this.handleNext.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -55,11 +57,16 @@ class QuestionLayout extends React.Component {
     const correct = this.state.correct
     if (this.state.answer == selection) {
       this.setState({
-        correct: correct + 1
+        correct: correct + 1,
+        result: '✅',
+        answered: true
       })
     } else {
-    }
-    this.setState({answered: true})
+      this.setState({
+        result: '❌',
+        answered: true
+      })
+    } 
   }
 
   handleNext() {
@@ -99,8 +106,6 @@ class QuestionLayout extends React.Component {
     }
   }
 
-  
-
   render(){
 
     if (this.state.finished == true) {
@@ -116,7 +121,6 @@ class QuestionLayout extends React.Component {
             </section>
             <div className="high-score">
               <HighScore/>
-            
             </div>
           </div>
       )
@@ -136,13 +140,18 @@ class QuestionLayout extends React.Component {
                   handleSelect = {this.handleSelect}
                   questionNum = {this.state.questionNum}
                   correct = {this.state.correct}
+                  key = {this.state.question}
+                />
+                <button className="btn btn-success" onClick={this.handleSubmit}>Submit</button>
+            </div>
+            <div className="high-score rounded">
+              <div className="hint-div">
+                <Hint 
                   hint = {this.state.hint}
                   key = {this.state.question}
                 />
-            </div>
-            <div className="high-score rounded">
+              </div>
               <HighScore/>
-              <button className="btn btn-success" onClick={this.handleSubmit}> Submit</button>
             </div>
           </div>
         </div>
@@ -162,13 +171,15 @@ class QuestionLayout extends React.Component {
                 handleSelect = {this.handleSelect}
                 questionNum = {this.state.questionNum}
                 correct = {this.state.correct}
-                hint = {this.state.hint}
                 key = {this.state.question}
               />
+              <button className="btn btn-success" onClick={this.handleNext}> Next Question</button>
             </div>
             <div className="high-score rounded">
+              <div className="hint-div">
+                <span>{this.state.result}</span>
+              </div>
               <HighScore/>
-              <button className="btn btn-success" onClick={this.handleNext}> Next Question</button>
             </div>
           </div>
         </div>
