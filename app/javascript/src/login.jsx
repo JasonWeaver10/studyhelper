@@ -68,7 +68,7 @@ class Login extends React.Component {
       method: 'POST',
       body: JSON.stringify(data)
     }));
-    await handleLogin();
+    await this.handleLogin();
     window.location = '/addTopic'
   }
 
