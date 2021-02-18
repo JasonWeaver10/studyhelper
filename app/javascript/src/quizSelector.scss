@@ -1,7 +1,7 @@
 .main-container {
   background-image: url("../../assets/images/nick-fewings-f2Bi-VBs71M-unsplash.jpg");
   background-size: contain;
-  min-height: 80vh;
+  min-height: 40vh;
   select {
     margin: 5%;
   }
@@ -30,5 +30,10 @@
       background-color: white;
       padding: 5%;
     }
+  }
+}
+@media only screen and (min-width: 768px) {
+  .main-container {
+    min-height: 80vh;
   }
 }

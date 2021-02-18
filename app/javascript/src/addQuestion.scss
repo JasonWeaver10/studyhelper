@@ -1,6 +1,7 @@
 .main-container {
   display: flex;
   flex-direction: row;
+  min-height: 40vh;
   .main-content {
     flex: 3;
     background-color: rgba(179,207,221,.50);
@@ -45,6 +46,10 @@
         margin-top: 50%;
       }
     }
-    
+  }
+}
+@media only screen and (min-width: 768px) {
+  .main-container {
+    min-height: 80vh;
   }
 }

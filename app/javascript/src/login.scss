@@ -1,7 +1,7 @@
 .main-container {
   width: 60%;
   margin: 0 auto;
-  min-height: 80vh;
+  min-height: 40vh;
   .main-content {
     display: flex;
     flex-direction: column;
@@ -22,5 +22,10 @@
       height: 30%;
       padding: 5%;
     }
+  }
+}
+@media only screen and (min-width: 768px) {
+  .main-container {
+    min-height: 80vh;
   }
 }
