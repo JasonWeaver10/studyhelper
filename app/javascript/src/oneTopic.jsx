@@ -13,7 +13,8 @@ class OneTopic extends React.Component {
       shuffled: [],
       loading: true,
       quizable: true,
-      high_score: 0
+      high_score: 0,
+      topic: 0
     }
     this.handleReset = this.handleReset.bind(this);
   } 
@@ -32,7 +33,10 @@ class OneTopic extends React.Component {
         }))
         .then((response) => response.json())
         .then((data) => {
-          this.setState({high_score: data.topic.high_score})
+          this.setState({
+            high_score: data.topic.high_score,
+            topic: topic
+          })
         })
         if (this.state.problems.length > 1) {
           let unshuffled = this.state.problems
@@ -78,6 +82,7 @@ class OneTopic extends React.Component {
               problems={this.state.shuffled}
               handleReset = {this.handleReset}
               high_score={this.state.high_score}
+              topic={this.state.topic}
             />
           </Layout> 
       ) 

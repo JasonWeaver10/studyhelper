@@ -87,11 +87,12 @@ class QuestionLayout extends React.Component {
   handleHighScoreUpdate() {
     const oldScore = this.props.high_score
     const newScore = this.state.correct
+    const topic = this.props.topic
     if (newScore > oldScore ) {
       const data = {
         high_score: newScore
       }
-      fetch('../api/topics/'+ '7' , safeCredentials({
+      fetch(`../api/topics/` + topic , safeCredentials({
         method: "PUT",
         body: JSON.stringify(data)
       }))
