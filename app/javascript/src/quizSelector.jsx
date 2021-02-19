@@ -87,7 +87,7 @@ class QuizSelector extends React.Component {
         <div className="desktop container main-container">
           <div className="main-content">
             <div className="text-div">
-              <h1>Which Topic would you like to be Quizzed on?</h1>
+              <h1>What type of quiz would you like?</h1>
               <input type="radio" name="quiz-select" onClick={this.selectOne}></input>
               <h3>I want to be quizzed on:</h3>
               <select onChange={this.handleChange}>
