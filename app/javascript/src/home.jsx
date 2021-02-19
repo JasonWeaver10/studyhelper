@@ -7,9 +7,7 @@ import './home.scss';
 class Home extends React.Component {
   constructor(){
   super();
-    this.state = {
-      hello: ''
-    }
+    
   }
 
   render(){

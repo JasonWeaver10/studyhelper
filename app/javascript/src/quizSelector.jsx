@@ -69,7 +69,22 @@ class QuizSelector extends React.Component {
   render(){
     return (
       <Layout>
-        <div className="container main-container">
+        <div className="mobile container main-container">
+          <div className="main-content">
+            <div className="text-div">
+              <h1>Which Quiz?</h1>
+              <input type="radio" name="quiz-select" onClick={this.selectOne}></input>
+              <select onChange={this.handleChange}>
+                {this.renderSelect()}
+              </select>
+              <p>or</p>
+              <input type="radio" name="quiz-select" onClick={this.selectAll}></input>
+              <h3>Everything!</h3>
+            </div>
+            <button className="submit btn btn-success" type="submit" onClick={this.handleSubmit}>Get Started!</button>
+          </div>
+        </div>
+        <div className="desktop container main-container">
           <div className="main-content">
             <div className="text-div">
               <h1>Which Topic would you like to be Quizzed on?</h1>
