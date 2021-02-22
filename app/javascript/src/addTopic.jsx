@@ -22,7 +22,7 @@ class AddTopic extends Component {
   }
 
   componentDidMount() {
-    fetch('./api/authenticated', safeCredentials({
+    fetch('/api/authenticated', safeCredentials({
     }))
     .then((response) => response.json())
     .then((data) => {
@@ -44,7 +44,7 @@ class AddTopic extends Component {
       high_score: 0,
       user_id: this.state.user_id
     }
-    await fetch('./api/topics', safeCredentials({
+    await fetch('/api/topics', safeCredentials({
       method: "POST",
       body: JSON.stringify(data)
     }) )

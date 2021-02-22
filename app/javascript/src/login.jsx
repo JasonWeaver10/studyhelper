@@ -102,7 +102,7 @@ class Login extends React.Component {
                 <label htmlFor="email">Email:</label>
                 <input type="text" id="email" required onChange={this.handleChange}/>
                 <label htmlFor="password">Password:</label>
-                <input type="text" id="password" required onChange={this.handleChange}/>
+                <input type="text" id="password" type="password" required onChange={this.handleChange}/>
                 <button className="btn btn-success" onClick={this.handleLogin}>Log In</button>
                 <button className="btn btn-warning" onClick={this.toggleLogin}>I do not have an account</button>
               </div>
@@ -120,7 +120,7 @@ class Login extends React.Component {
               <label htmlFor="username" required>Username:</label>
               <input type="text" id="username" onChange={this.handleChange}/>
               <label htmlFor="password">Password:</label>
-              <input type="text" id="password" required onChange={this.handleChange}/>
+              <input type="text" id="password" type="password" required onChange={this.handleChange}/>
               <button onClick={this.handleSignUp}className="btn btn-success">Sign Up</button>
               <button onClick={this.toggleLogin} className="btn btn-warning">I already have an account</button>
             </div>
