@@ -140,7 +140,7 @@ class AddQuestion extends Component {
             </div>
           </div> 
           <div className="side-panel">
-            <div className="top-spacer">
+            <div className="top-spacer desktop">
             </div>
             <div className="button-div">
               <button className="btn btn-success" onClick={this.handleSubmit}>Add Question</button>
