@@ -5,9 +5,14 @@ import './layout.scss';
 const Layout = (props) => {
   return (
     <React.Fragment>
-      <nav className="navbar navbar-expand navbar-light bg-light">
+      <nav className="navbar navbar-expand-lg navbar-light bg-light">
         <a href="/"><span className="navbar-brand mb-0 h1 logoImage"></span></a>
-        <div className="collapse navbar-collapse">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarStudyHelper" aria-controls="navbarStudyHelper" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+        </button>
+
+
+        <div className="collapse navbar-collapse" id="navbarStudyHelper">
           <ul className="navbar-nav">
             <li className="nav-item">
               <a className="nav-link" href="/addTopic">Add Topic</a>
