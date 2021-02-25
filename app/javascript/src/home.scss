@@ -14,18 +14,43 @@
       background: rgba(179,207,221,.50);
       flex: 1;
       color: white;
-      padding: 60px;
       height: 10%;
+      h1 {
+        font-size: 2em;
+        text-align: center;
+        margin-top: 2em;
+      }
       p {
-        margin: 20px;
-        font-size: 1.5em;
+        margin: 1em;
+        font-size: 1em;
         font-weight: 400;
       }
       .welcome-nav {
-        margin-top: 180px;
+        margin-top: 1em;
+        background-color: rgba(179,207,221,.70);
+        padding: 1em;
+        border-radius: 1em;
       }
-    }
-    
+    } 
   }
   
+}
+@media (min-width: 769px) {
+  .main-container {
+    .main-content {
+      .welcome-info {
+        padding: 60px;
+        h1 {
+          font-size: 3em;
+          margin-top: 1em;
+        }
+        p {
+          font-size: 2em;
+        }
+        .welcome-nav {
+          margin-top: 7em;
+        }
+      }
+    }
+  }
 }

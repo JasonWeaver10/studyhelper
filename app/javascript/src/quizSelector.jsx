@@ -72,7 +72,7 @@ class QuizSelector extends React.Component {
         <div className="mobile container main-container">
           <div className="main-content">
             <div className="text-div">
-              <h1>Which Quiz?</h1>
+              <h2>Which Quiz?</h2>
               <input type="radio" name="quiz-select" onClick={this.selectOne}></input>
               <select onChange={this.handleChange}>
                 {this.renderSelect()}
