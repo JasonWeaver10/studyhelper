@@ -70,7 +70,7 @@ class Login extends React.Component {
       password: this.state.password,
       email: this.state.email
     }
-    await fetch('./api/users', safeCredentials({
+    await fetch('/api/users', safeCredentials({
       method: 'POST',
       body: JSON.stringify(data)
     }));

@@ -18,7 +18,7 @@ class Questions extends React.Component {
   } 
 
   async componentDidMount(){
-    await fetch('./api/authenticated', safeCredentials({
+    await fetch('/api/authenticated', safeCredentials({
     }))
     .then((response) => response.json())
     .then((data) => {
@@ -46,7 +46,7 @@ class Questions extends React.Component {
 
   async handleDelete(e) {
     const deleteId = e.target.id
-    await fetch('./api/problems/' + `${deleteId}`, safeCredentials({
+    await fetch('/api/problems/' + `${deleteId}`, safeCredentials({
       method: 'DELETE'
     }))
     window.location = '/questions'

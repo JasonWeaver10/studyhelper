@@ -17,7 +17,7 @@ class Logout extends React.Component {
   }
 
   componentDidMount() {
-    fetch('./api/authenticated', safeCredentials({
+    fetch('/api/authenticated', safeCredentials({
     }))
     .then((response) => response.json())
     .then((data) => {
@@ -38,7 +38,7 @@ class Logout extends React.Component {
   handleLogout() {
     console.log("logged-out");
     const session = this.state.session_id
-    fetch('./api/sessions/' + session , safeCredentials({
+    fetch('/api/sessions/' + session , safeCredentials({
       method: 'DELETE',
     }));
     this.setState({ authenticated: false })

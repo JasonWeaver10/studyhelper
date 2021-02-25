@@ -83,7 +83,7 @@ class AddQuestion extends Component {
       topic_id: this.state.topic_id,
     };
 
-    await fetch('./api/problems', safeCredentials({
+    await fetch('/api/problems', safeCredentials({
       method: "POST",
       body: JSON.stringify(data)
     }));

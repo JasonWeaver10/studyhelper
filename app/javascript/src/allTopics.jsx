@@ -19,7 +19,7 @@ class AllTopics extends React.Component {
   }
 
   async componentDidMount(){
-    await fetch('./api/problems', safeCredentials({
+    await fetch('/api/problems', safeCredentials({
     }))
     .then((response) => response.json())
     .then((data) => {

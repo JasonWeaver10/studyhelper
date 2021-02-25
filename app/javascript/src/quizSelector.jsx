@@ -21,7 +21,7 @@ class QuizSelector extends React.Component {
   } 
 
   componentDidMount() {
-    fetch('./api/topics', safeCredentials({
+    fetch('/api/topics', safeCredentials({
 
     }))
     .then((response) => response.json())

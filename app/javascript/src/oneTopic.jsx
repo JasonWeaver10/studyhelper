@@ -23,13 +23,13 @@ class OneTopic extends React.Component {
       const queryString = window.location.search;
       const urlParams = new URLSearchParams(queryString);
       const topic = urlParams.get('t')
-        await fetch('../api/topicProblems/' + topic, safeCredentials({
+        await fetch('/api/topicProblems/' + topic, safeCredentials({
         }))
         .then((response) => response.json())
         .then((data) => {
           this.setState({problems: data.problems})
         })
-        await fetch('../api/topics/' + topic, safeCredentials({
+        await fetch('/api/topics/' + topic, safeCredentials({
         }))
         .then((response) => response.json())
         .then((data) => {
