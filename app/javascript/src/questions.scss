@@ -1,6 +1,6 @@
 .main-container {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   min-height: 80vh;
   padding: 4%;
   background-image: url('../../assets/images/nick-fewings-f2Bi-VBs71M-unsplash.jpg');
@@ -17,15 +17,17 @@
       border: 2px solid black;
       margin: 5px;
       padding: 10px;
-      h4 {
-        margin: 5px;
-        display: block;
-      }
-      .btn-warning {
-        margin-right: 10px;
-      }
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+      .button-div {
+        .btn {
+          display: inline-block;
+          width: 25%;
+          margin: .5em;
+        }
+      } 
     }
-
   }
   .spacer {
     flex: .5;
@@ -39,5 +41,29 @@
     .radio {
       margin: 10px;
     }
+  }
+}
+@media only screen and (min-width: 769px) {
+  .main-container {
+    flex-direction: row;
+    .main-content {
+      .question-div {
+        display: block;
+        background: white;
+        border: 2px solid black;
+        margin: 5px;
+        padding: 10px;
+        h4 {
+          margin: 5px;
+        }
+        .btn {
+          display: inline;
+        }
+        .btn-warning {
+          margin-right: 10px;
+        }
+      }
+    }
+    
   }
 }
