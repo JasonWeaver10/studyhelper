@@ -3,22 +3,30 @@
   background-size: cover;
   background-repeat: no-repeat;
   margin: 0 auto;
-  min-height: 40vh;
+  min-height: 80vh;
   .main-content{
     background-color: rgba(179,207,221, .8);
     border: 2px solid black;
     padding: 10px;
     text-align: center;
-    button{
-      margin-left: 40%;
-      margin-right: 40%;
-      margin-bottom: 20px;
-      margin-top: 20px;
+    .btn {
+      width: 50%;
+      margin-left: 25%;
+      margin-right: 25%;
+      margin-bottom: 2em;
+      margin-top: 2em;
     }
   }
 }
 @media only screen and (min-width: 768px) {
   .main-container {
     min-height: 80vh;
+    .main-content {
+      .btn {
+        width: 20%;
+        margin-left: 40%;
+        margin-right: 40%;
+      }
+    }
   }
 }
