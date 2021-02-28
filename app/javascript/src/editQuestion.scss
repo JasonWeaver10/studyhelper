@@ -1,6 +1,6 @@
 .main-container {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   min-height: 40vh;
   .main-content {
     flex: 3;
@@ -8,6 +8,12 @@
     border: 2px solid black;
     margin: 10px;
     padding: 10px;
+  }
+  .topic-select {
+    h4 {
+      display: inline-block;
+      margin-right: 20px;
+    }
   }
   .answer {
     background-color: white;
@@ -17,6 +23,7 @@
     padding: 10px;
     margin: 10px;
     textarea {
+      margin-top: 2px;
       width: 100%;
     }
   }
@@ -25,26 +32,42 @@
     display: flex;
     flex-direction: column;
     .top-spacer {
-      padding: 10px;
-      margin-top: 20%;
-      background-image: url('../../assets/images/david-pennington-T-GjUWPW-oI-unsplash.jpg');
-      background-size: cover;
-      flex: 3;
+      display: none;
     }
     .button-div {
       flex: 1;
       margin: 0 auto;
+      width: 100%;
       padding: 10px;
       button {
-        margin-top: 50%;
-        padding: 10px;
+       width: 50%;
+       margin-left: 25%;
+       margin-right: 25%
       }
     }
-    
   }
 }
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 1000px) {
   .main-container {
     min-height: 80vh;
+    flex-direction: row;
+    .side-panel {
+      flex-direction: column;
+      .top-spacer {
+        background-image: url("../../assets/images/david-pennington-T-GjUWPW-oI-unsplash.jpg");
+        background-size: cover;
+        margin-top: 1em;
+        display: flex;
+        flex: 3;
+      }
+      .button-div {
+        button {
+          margin-top: 10%;
+        }
+      }
+    }
   }
 }
+
+
+ 
