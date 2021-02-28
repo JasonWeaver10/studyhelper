@@ -29,7 +29,7 @@
 
 ## StudyHelper original wireframes:
 
-[link](https://drive.google.com/drive/folders/1Qud6myWoadWluiSUYM7kTk8Z2mCICmKY?usp=sharing)
+[WireFrames](https://drive.google.com/drive/folders/1Qud6myWoadWluiSUYM7kTk8Z2mCICmKY?usp=sharing)
 
 
 ## User Feedback:
@@ -50,9 +50,9 @@ Feedback wanted the ability to edit and delete questions and answers
 
 
 ## Unsolved Issues: 
- -changing the database structure to allow high scores from individuals, as opposed to one high score for everyone
- -review design (always can be better)
- -add high score for all topics
+ - changing the database structure to allow high scores from individuals, as opposed to one high score for everyone
+ - review design (always can be better)
+ - add high score for all topics
  
  I struggled with how to design this app to protect users from other users. I wanted the ability to use other user's quizzes, without the ability to edit / delete them. This opened up a few issues with my high score component. Originally it was designed for a solo user, and no one would have access to quizzes, topics except for the user that created it. I ultimately decided to allow others to use quizzes, and set the high score for the topic, not an individual user. This approach gives users the ability to strive to reach a new score while studying their chosen topic. 
 
