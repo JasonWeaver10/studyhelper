@@ -1,57 +1,21 @@
-.main-container {
-  display: flex;
-  flex-direction: row;
-  min-height: 80vh;
-  .main-content {
-    background-image: url('../../assets/images/nguyen-dang-hoang-nhu-cbEvoHbJnIE-unsplash.jpg');
-      background-size: cover;
-    flex: 3;
-    margin: 10px;
-    padding: 10px;
-    .finished {
-      background-color: rgba(179,207,221, .8);
-      text-align: center;
-      padding: 5%;
-    }
-    button {
-      width: 50%;
-      margin-left: 25%;
-      margin-right: 25%;
-    }
+.question-div {
+  .h3 {
+    font-size: 1em;
+    text-align: center;
+
   }
-  .high-score {
-    background-image: url('../../assets/images/notebook.png');
-    background-repeat: repeat;
-    flex: 1;
-    border: 2px solid black;
-    margin: 10px;
-    padding: 10px;
-    align-content: center;
-    
-    
-    button {
-      margin-left: 25%;
-      margin-right: 25%;
-      width: 50%;
-    }
+  .h2 {
+    font-size: 1em; 
   }
-  .answer .rounded {
-    border-top-right-radius: 50px;
-    border-top-left-radius: 50px;
-  }  
-  .answer {
-    background-color: white;
-    display: flex;
-    flex-direction: row;
-    border: 2px solid black;
-    padding: 5px;
-    margin: 5px;
-    .rounded {
-      border-top-right-radius: 50px;
-      border-top-left-radius: 50px;
-    }  
-    .radio {
-      margin: 10px;
+}
+
+@media only screen and (min-width: 769px)  {
+  .question-div {
+    .h3 {
+      font-size: 1.5em;
+    }
+    .h2 {
+      font-size: 2em;
     }
   }
 }

@@ -1,5 +1,5 @@
 .main-container {
-  width: 60%;
+  width: 80%;
   margin: 0 auto;
   min-height: 40vh;
   .main-content {
@@ -27,5 +27,6 @@
 @media only screen and (min-width: 768px) {
   .main-container {
     min-height: 80vh;
+    width: 60%;
   }
 }

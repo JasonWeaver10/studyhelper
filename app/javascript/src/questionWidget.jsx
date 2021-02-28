@@ -45,10 +45,10 @@ class QuestionWidget extends React.Component {
     return (
           <div className="inner-content">
             <div className="question-div">
-              <h3>Question: {this.props.questionNum}</h3>
-              <h3>Correct answers: {this.props.correct}</h3>
+              <h3 className="h3">Question: {this.props.questionNum}</h3>
+              <h3 className="h3">Correct answers: {this.props.correct}</h3>
               <hr></hr>
-              <h2>{this.props.question}</h2>
+              <h2 className="h2">{this.props.question}</h2>
             </div>
             <div className="answer-content">
               {this.renderAnswers()}
