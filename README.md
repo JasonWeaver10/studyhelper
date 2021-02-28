@@ -5,20 +5,20 @@
 ## Technologies Used
 
   - [React](https://reactjs.org/) 
-    :A front-end library that uses JavaScript to create Apps
+    : A front-end library that uses JavaScript to create Apps
   - [Bootstrap](https://getbootstrap.com/)
-    :A design system used to easily add styling to apps
+    : A design system used to easily add styling to apps
   - [Ruby on rails](https://rubyonrails.org/)
-    :A technology for creating a back-end API using Ruby
+    : A technology for creating a back-end API using Ruby
   - database 
     - production  [PostgreSql](https://www.postgresql.org/)
-      :A version of SQL used by Heroku for deployment
+      : A version of SQL used by Heroku for deployment
     - development [Sqlite](https://www.sqlite.org/index.html)
-      :A version of SQL used by Rails by default
+      : A version of SQL used by Rails by default
   - [Bcrypt](https://en.wikipedia.org/wiki/Bcrypt)
-    :A gem used with Rails to encrypt passwords and other sensitive data
+    : A gem used with Rails to encrypt passwords and other sensitive data
   - [jbuilder](https://github.com/rails/jbuilder)
-    :A gem used with Rails to build JSON 
+    : A gem used with Rails to build JSON 
   
 
 
