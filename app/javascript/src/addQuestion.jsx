@@ -18,7 +18,8 @@ class AddQuestion extends Component {
       hint: '',
       topic_id: 0,
       topics: [],
-      user_id: 0
+      user_id: 0,
+      noTopics: true,
     }
     this.handleSubmit = this.handleSubmit.bind(this);
     this.handleChange = this.handleChange.bind(this);
@@ -35,17 +36,22 @@ class AddQuestion extends Component {
           user_id: data.session.id
         })
       })
-      .then()
       const user_id = this.state.user_id
         fetch("./api/userTopics/" + user_id, safeCredentials({
         }))
         .then((response) => response.json())
         .then((data) => {
+          if (data.topics.length < 1) {
+            this.setState({
+              noTopics: true
+            })
+          } else {
           this.setState({ 
             topics: data.topics,
-            topic_id: data.topics[0].id
+            topic_id: data.topics[0].id,
+            noTopics: false
            })
-
+          }
           });
   };
 
@@ -92,63 +98,79 @@ class AddQuestion extends Component {
 
 
   render() {
-    return (
-      <Layout>
-        <div className="container main-container">
-          <div className="main-content">
-            <div className="topic-select">
-              <h4>What topic is this question for?</h4>
-              <select name="topics" id="topics" onChange={this.handleSelect}>
-                {this.renderSelect()}
-              </select>
+    if (this.state.noTopics == true) {
+      return (
+        <Layout>
+          <div className="container main-container">
+            <div className="main-content noTopicBack">
+              <div className="noTopic">
+                <h4>You need to add a Topic before you can add a question</h4>
+              </div>
             </div>
-            <div className="answer">
-              <label htmlFor="question">Question:</label>
-              <textarea type="text-area" id="question" required
-              value={this.state.question}
+          </div>
+        </Layout>
+      )
+
+    }else {
+
+      return (
+        <Layout>
+          <div className="container main-container">
+            <div className="main-content">
+              <div className="topic-select">
+                <h4>What topic is this question for?</h4>
+                <select name="topics" id="topics" onChange={this.handleSelect}>
+                  {this.renderSelect()}
+                </select>
+              </div>
+              <div className="answer">
+                <label htmlFor="question">Question:</label>
+                <textarea type="text-area" id="question" required
+                value={this.state.question}
+                onChange={this.handleChange}/>
+              </div>
+              <div className="answer">
+                <label htmlFor="correct">Correct Answer:</label>
+                <textarea type="textarea" id="correct" required
+                value={this.state.correct}
+                onChange={this.handleChange}/>
+              </div>
+              <div className="answer">
+                <label htmlFor="false#1">False Answer:</label>
+                <textarea type="textarea" id="false1" required
+                value={this.state.false1}
+                onChange={this.handleChange}/>
+              </div>
+              <div className="answer">
+              <label htmlFor="false#2">False Answer:</label>
+              <textarea type="textarea" id="false2" required
+              value={this.state.false2}
               onChange={this.handleChange}/>
-            </div>
-            <div className="answer">
-              <label htmlFor="correct">Correct Answer:</label>
-              <textarea type="textarea" id="correct" required
-              value={this.state.correct}
-              onChange={this.handleChange}/>
-            </div>
-            <div className="answer">
-              <label htmlFor="false#1">False Answer:</label>
-              <textarea type="textarea" id="false1" required
-              value={this.state.false1}
-              onChange={this.handleChange}/>
-            </div>
-            <div className="answer">
-            <label htmlFor="false#2">False Answer:</label>
-            <textarea type="textarea" id="false2" required
-            value={this.state.false2}
-            onChange={this.handleChange}/>
-            </div>
-            <div className="answer">
-              <label htmlFor="false#3">False Answer:</label>
-              <textarea type="textarea" id="false3" required
-              value={this.state.false3}
-              onChange={this.handleChange}/>
-            </div>
-            <div className="answer">
-              <label htmlFor="hint">Hint:</label>
-              <textarea type="textarea" id="hint" required
-              value={this.state.hint}
-              onChange={this.handleChange}/>
-            </div>
-          </div> 
-          <div className="side-panel">
-            <div className="top-spacer desktop">
-            </div>
-            <div className="button-div">
-              <button className="btn btn-success" onClick={this.handleSubmit}>Add Question</button>
-            </div>
-          </div> 
-        </div>
-      </Layout>
-    )
+              </div>
+              <div className="answer">
+                <label htmlFor="false#3">False Answer:</label>
+                <textarea type="textarea" id="false3" required
+                value={this.state.false3}
+                onChange={this.handleChange}/>
+              </div>
+              <div className="answer">
+                <label htmlFor="hint">Hint:</label>
+                <textarea type="textarea" id="hint" required
+                value={this.state.hint}
+                onChange={this.handleChange}/>
+              </div>
+            </div> 
+            <div className="side-panel">
+              <div className="top-spacer desktop">
+              </div>
+              <div className="button-div">
+                <button className="btn btn-success" onClick={this.handleSubmit}>Add Question</button>
+              </div>
+            </div> 
+          </div>
+        </Layout>
+      )
+    }
   }
 }
 document.addEventListener('DOMContentLoaded', () => {

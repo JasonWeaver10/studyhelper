@@ -9,6 +9,15 @@
     margin: 10px;
     padding: 10px;
   }
+  .noTopicBack {
+    background-image: url('../../assets/images/chuttersnap-f39ab9Rrx0Q-unsplash.jpg');
+    background-size: cover;
+    .noTopic {
+      background-color: rgba(179,207,221,.80);
+      text-align: center;
+      padding: .5em;
+    }
+  }
   .topic-select {
     h4 {
       display: inline-block;
