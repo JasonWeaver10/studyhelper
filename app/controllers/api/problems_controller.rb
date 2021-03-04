@@ -62,7 +62,6 @@ module Api
       @topics.each do |topic|
         topic_ids.push(topic.id)
       end
-
       @problems = Problem.where(topic_id: topic_ids )
       if !@problems 
         render json: { success: false }, status: :bad_request
