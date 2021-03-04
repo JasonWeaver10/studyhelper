@@ -1,6 +1,8 @@
 class User < ApplicationRecord
   has_many :topics
   has_many :sessions
+  has_many :problems, through: :topics
+
   
   validates :username, presence: true, length: { minimum: 3, maximum: 64 }
   validates :password, presence: true, length: { minimum: 8, maximum: 64 }
