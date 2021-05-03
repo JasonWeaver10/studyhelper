@@ -4,12 +4,13 @@
   flex-direction: column;
   min-height: 40vh;
   background-image: url('../../assets/images/chuttersnap-f39ab9Rrx0Q-unsplash.jpg');
+  justify-content: center;
   background-size: cover;
   .main-content {
-    min-height: 60vh;
+    border-radius: 1em;
+    min-height: 30vh;
     background-color: rgba(179,207,221,.50);
     border: 2px solid black;
-    margin: 10px;
     padding: 10px;
   }
   .answer {
@@ -18,6 +19,10 @@
     border: 2px solid black;
     padding: 10px;
     margin: 10px;
+    label {
+      font-size: 2em;
+      font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    }
     textarea {
       margin-top: 2px;
       width: 100%;
@@ -38,11 +43,20 @@
 @media only screen and (min-width: 768px) {
   .main-container {
     min-height: 80vh;
-    .button-div{
-      button {
-        width: 20%;
-        margin-right: 40%;
-        margin-left: 40%;
+    border-radius: 1em;
+    .main-content{
+      .answer {
+        border-radius: 1rem;
+        filter: drop-shadow(10px 10px 4px rgba(0,0,0,.5));
+      }
+      .button-div{
+        button {
+          width: 20%;
+          margin-right: 40%;
+          margin-left: 40%;
+          border-radius: 1em;
+          filter: drop-shadow(10px 10px 4px rgba(0,0,0,.5));
+        }
       }
     }
   }
