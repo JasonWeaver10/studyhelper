@@ -1,4 +1,4 @@
-# STUDY HElPER README
+# STUDY HELPER README
 
 **StudyHelper** is a quiz / study app originally designed to help new developers learn different languages. The app will have different quizzes for different languages, and each page will have a series of random questions that users can answer. The app will save the high score and show them the answers to questions they missed. The app will allow users to upload their own questions and language preferences. I changed the app to allow topics and questions about anything, so it is no longer only useful to developers.
 
