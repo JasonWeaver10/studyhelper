@@ -36,12 +36,12 @@ const Layout = (props) => {
       </div>
       <footer className="footer">
           <ul className="footer-links">
-            <a href="https://www.github.com/JasonWeaver10"><li>Github</li></a>
-            <a href="https://www.linkedin.com/in/jason-weaver-348bb6180/"><li>LinkedIn</li></a>
-            <a href="https://www.jweaver.dev"><li>Portfolio Site</li></a>
-            <a href="https://www.unsplash.com"><li>Unsplash</li></a>
+            <a href="https://www.github.com/JasonWeaver10"><li><i className="fab fa-github"></i></li></a>
+            <a href="https://www.linkedin.com/in/jason-weaver-348bb6180/"><li><i className="fab fa-linkedin-in"></i></li></a>
+            <a href="https://www.jweaver.dev"><li><i className="far fa-newspaper"></i></li></a>
+            <a href="https://www.unsplash.com"><li><i className="fab fa-unsplash"></i></li></a>
           </ul>
-          <p>Image Attribution:</p>
+          {/* <p>Image Attribution:</p>
           <ul className="footer-image-info">            
             <li>Home Page Image: Windows</li>
             <li>Add Question Page Image: Siora Photography</li>
@@ -50,7 +50,7 @@ const Layout = (props) => {
             <li>All Questions Page Image: Nick Fewings</li>
             <li>Log-out image: Muhammed Jiyadh</li>
             <li>Quiz image: Nguyen Dang Hoang</li>
-          </ul>
+          </ul> */}
       </footer>
         
     </React.Fragment>

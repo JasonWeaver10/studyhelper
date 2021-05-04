@@ -6,12 +6,22 @@
   background-image: url('../../assets/images/chuttersnap-f39ab9Rrx0Q-unsplash.jpg');
   justify-content: center;
   background-size: cover;
+  position: relative;
+  overflow: hidden;
   .main-content {
     border-radius: 1em;
     min-height: 30vh;
     background-color: rgba(179,207,221,.50);
     border: 2px solid black;
     padding: 10px;
+    animation-name: slideRight;
+    animation-duration: 2s;
+    animation-delay: 1s;
+    animation-timing-function: ease;
+    animation-fill-mode: forwards;
+    position: absolute;
+    width: 80%;
+    left: -90%;
   }
   .answer {
     background-color: white;
@@ -60,6 +70,11 @@
       }
     }
   }
+}
+
+@keyframes slideRight {
+ 0% { transform: translateX(0%)}
+ 100% { transform: translateX(125%)}
 }
    
     

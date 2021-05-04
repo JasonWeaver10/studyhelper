@@ -10,9 +10,6 @@
     list-style-type: none;
     flex: 1;
     display: flex;
-    font-size: .7em; 
-    margin: 1em;
-    padding: 1em;
     a {
       flex: 1;
       text-align: center;
@@ -56,12 +53,13 @@
 
 @media (min-width: 768px) {
   .footer {
-    background-color: rgba(179,207,221, .8);
+    background-color: rgba(109, 110, 110, 0.8);
     .footer-links{
       margin-top: .5em;
       flex: 1;
       li {
-        font-size: 1em;
+        font-size: 2em;
+        color: white;
       }
     }
     .footer-image-info {
