@@ -24,7 +24,7 @@
 
 ## Screen Shot
 
-![image](https://user-images.githubusercontent.com/48182959/109425677-6f681400-79b7-11eb-8e87-e859a322a53c.png)
+![screencapture-localhost-3000-2021-05-03-21_02_19](https://user-images.githubusercontent.com/48182959/116950497-2cdee400-ac53-11eb-9d76-53ed4b161bc9.png)
 
 
 ## StudyHelper original wireframes:
