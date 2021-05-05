@@ -1,7 +1,7 @@
 .addQ-container {
   overflow-y: visible;
   position: relative;
-  font-family: 'Itim', cursive;
+  font-family: 'Montserrat', sans-serif;
 }
 .addQ-main-container {
   flex-direction: column;
@@ -16,6 +16,7 @@
   overflow-y: visible;
   display: flex;
   .addQ-main-content {
+    font-weight: 700;
     overflow-y: visible;
     flex: 3;
     background: linear-gradient(
@@ -45,20 +46,20 @@
     }
   }
   .addQ-topic-select {
-    margin: 0 auto;
     display: flex;
-    width: 80%;
+    width: 100%;
     h4 {
-      flex: 2;
+      font-weight: 700;
+      margin: 0 auto;
     }
     select {
-      flex: 1;
+      margin: 0 auto;
       border-radius: 1em;
       padding: .5em 1em;
+
     }
   }
   .addQ-answer {
-    color: #0275d8;
     background-color: white;
     display: flex;
     flex-direction: column;
@@ -94,6 +95,7 @@
       bottom: 15rem;
       right: 2rem;
       .btn-add {
+       font-weight: 600;
        opacity: 0;
        animation: buttonFadeIn 4s forwards 2s;
        width: 70%;

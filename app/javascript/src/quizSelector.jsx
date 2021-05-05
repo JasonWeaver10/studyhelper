@@ -84,20 +84,26 @@ class QuizSelector extends React.Component {
             <button className="submit btn btn-success" type="submit" onClick={this.handleSubmit}>Get Started!</button>
           </div>
         </div>
-        <div className="desktop container main-container">
-          <div className="main-content">
-            <div className="text-div">
+        <div className="quizS-desktop container">
+          <div className="quizS-main-content">
+            <div className="quizS-text-div">
               <h1>What type of quiz would you like?</h1>
-              <input type="radio" name="quiz-select" onClick={this.selectOne}></input>
+              <input className="quizS-radio" type="radio" name="quiz-select" onClick={this.selectOne}></input>
               <h3>I want to be quizzed on:</h3>
               <select onChange={this.handleChange}>
                 {this.renderSelect()}
               </select>
               <p>or</p>
-              <input type="radio" name="quiz-select" onClick={this.selectAll}></input>
+              <input className="quizS-radio" type="radio" name="quiz-select" onClick={this.selectAll}></input>
               <h3>I want to be quizzed on everything!</h3>
             </div>
-            <button className="submit btn btn-success" type="submit" onClick={this.handleSubmit}>Get Started!</button>
+           
+          </div>
+          <div className="quizS-circle-1"></div>
+          <div className="quizS-circle-2"></div>
+          <div className="quizS-button-div">
+             <button className="quizS-submit btn btn-primary" type="submit" onClick={this.handleSubmit}>Get Started!
+             </button>
           </div>
         </div>
       </Layout>

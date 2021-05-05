@@ -1,3 +1,6 @@
+body {
+  font-family: 'Montserrat', sans-serif;
+}
 @media (max-width: 767px) {
   .desktop {
     display: none;
@@ -23,12 +26,15 @@
         background-color: white;
         h2 { 
           margin-top: 10%;
+          font-weight: 700;
         }
         h3 {
           display: inline;
           margin-left: 20px;
+          font-weight: 400;
         }
         p {
+          font-weight: 400;
           font-size: 2em;
           margin-left: 40%;
           margin-right: 40%;
@@ -48,49 +54,135 @@
   .mobile {
     display: none;
   }
-  .desktop{
-    background-image: url("../../assets/images/nick-fewings-f2Bi-VBs71M-unsplash.jpg");
-    background-size: contain;
+  .quizS-desktop{
+    position: relative;
     min-height: 80vh;
-    .main-content {
-      background-color: rgba(179,207,221, .5);
-      padding: 5%;
-      min-height: 40vh;
-      .text-div {
-        border: 2px solid black;
+    background: linear-gradient(
+    to right bottom,
+    rgba(40, 158, 218, .7),
+    rgba(40, 158, 218, 1)
+    );
+    display: flex;
+    flex-direction: column;
+    border-radius: 1em;
+    .quizS-main-content {
+     filter: drop-shadow(10px 10px 4px rgba(0,0,0,.5));
+     z-index: 2;
+     width: 80%;
+     margin: 0 auto;
+     margin-top: 5%;
+      .quizS-text-div {
+        z-index: 2;
+        background: linear-gradient(
+          to right bottom,
+          rgba(255,255,255,0.8),
+          rgba(255,255,255,0.5)
+        );
+        border-radius: 1em;
         padding: 5%;
         min-height: 30vh;
-        background-color: white;
         h1 { 
+          opacity: 0;
           margin-top: 5%;
           margin-bottom: 5%;
           text-align: center;
+          font-weight: 700;
+          animation: quizS-FadeIn 3s forwards 1s;
         }
         select {
+          opacity: 0;
           display: inline;
           width: 20%;
           margin-left: 2%;
           margin-right: 0;
+          border-radius: 1em;
+          padding: 1em .5em;
+          animation: quizS-FadeIn 4s forwards 3s;
         }
         h3 {
+          opacity: 0;
+          font-weight: 400;
           display: inline;
           margin-left: 20px;
+          animation: quizS-FadeIn 4s forwards 3s;
         }
         p {
+          opacity: 0;
+          font-weight: 400;
           font-size: 3em;
           margin-left: 40%;
           margin-right: 40%;
           margin-bottom: 5%;
+          animation: quizS-FadeIn 4s forwards 3s;
+        }
+        .quizS-radio {
+          opacity: 0;
+          height: 1.5em;
+          width: 1.5em;
+          animation: quizS-FadeIn 4s forwards 3s;
         }
       }
-      button {
-        padding: 2%;
-        margin: 0 auto;
-        margin-top: 5%;
-        display: block;
-        width: 20%;
+     
+    }
+    .quizS-button-div {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 3;
+      border-radius: 50%;
+      height: 15em; 
+      width: 15em;
+      position: absolute;
+      bottom: 3%;
+      right: 20%;
+      background: linear-gradient(
+        to right bottom,
+        rgba(225, 221, 221, .8),
+        gray
+      );
+      .quizS-submit {
+        font-weight: 600;
+        opacity: 0;
+        border: 4px solid white;
+        height: 70%;
+        width: 70%;
+        border-radius: 50%;
+        animation: quizS-FadeIn 4s forwards 4s;
       }
-    }   
+      .quizS-submit:hover {
+        transform: scale(1.10);
+      }
+    }
+    .quizS-circle-1 {
+      z-index: 1;
+      width: 25em;
+      height: 25em;
+      border-radius: 50%;
+      position: absolute;
+      bottom: 8%;
+      right: 0%;
+      background-image: url("../../assets/images/nick-fewings-f2Bi-VBs71M-unsplash.jpg");
+      background-size: contain;
+    }
+    .quizS-circle-2 {
+      z-index: 1;
+      width: 10em;
+      height: 10em;
+      border-radius: 50%;
+      position: absolute;
+      bottom: 45%;
+      right: 30%;
+      background: linear-gradient(
+        to top right,
+        rgba(247, 138, 50, 0.8),
+        rgba(230, 92, 7, 1)
+      );
+    }
   }     
+}
+
+@keyframes quizS-FadeIn {
+  0% {opacity: 0}
+  100% {opacity: 1}
 }
  
