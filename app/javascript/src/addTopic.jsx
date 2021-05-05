@@ -55,18 +55,20 @@ class AddTopic extends Component {
   render() {
     return (
       <Layout>
-        <div className="container main-container">
-          <div className="main-content">
-            <div className="answer">
+        <div className="container addT-main-container">
+          <div className="addT-main-content">
+            <div className="addT-answer">
               <label htmlFor="question">Topic Name:</label>
               <textarea type="text-area" id="topic"
               value={this.state.topic}
               onChange={this.handleChange}/>
             </div>
-            <div className="button-div">
-              <button className="btn btn-success" onClick={this.handleSubmit}>Add Topic</button>
-            </div>
           </div>
+          <div className="addT-button-div">
+              <button className="btn btn-primary addT-button" onClick={this.handleSubmit}>Add Topic</button>
+            </div>
+          <div className="addT-accent-circle-1"></div>
+          <div className="addT-accent-circle-2"></div>
         </div>
       </Layout>
     )

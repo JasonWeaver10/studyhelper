@@ -1,18 +1,27 @@
 
-.main-container {
+.addT-main-container {
+  font-family: 'Itim', cursive;
   display: flex;
   flex-direction: column;
   min-height: 40vh;
-  background-image: url('../../assets/images/chuttersnap-f39ab9Rrx0Q-unsplash.jpg');
+  background: linear-gradient(
+    to right bottom,
+    rgba(40, 158, 218, .5),
+    rgba(40, 158, 218, 1)
+  );
   justify-content: center;
-  background-size: cover;
   position: relative;
   overflow: hidden;
-  .main-content {
+  .addT-main-content {
+    filter: drop-shadow(10px 10px 4px rgba(0,0,0,.5));
+    z-index: 2;
     border-radius: 1em;
     min-height: 30vh;
-    background-color: rgba(179,207,221,.50);
-    border: 2px solid black;
+    background: linear-gradient(
+      to left top,
+      rgba(255,255,255,0.5),
+      rgba(255,255,255,0.3)
+    );
     padding: 10px;
     animation-name: slideRight;
     animation-duration: 2s;
@@ -23,50 +32,85 @@
     width: 80%;
     left: -90%;
   }
-  .answer {
+  .addT-answer {
+    color: #0275d8;
     background-color: white;
     flex-direction: column;
-    border: 2px solid black;
     padding: 10px;
     margin: 10px;
     label {
       font-size: 2em;
-      font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     }
     textarea {
       margin-top: 2px;
       width: 100%;
     }
   }
-  .button-div {
-    flex: .5;
-    padding: 20px;
-    button {
-      margin: 0 auto;
-      padding: 15px;
-      width: 50%;
-      margin-right: 25%;
-      margin-left: 25%;
-      border-radius: 1em;
-      filter: drop-shadow(10px 10px 4px rgba(0,0,0,.5));
+  .addT-button-div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 15em;
+    width: 15em;
+    border-radius: 50%;
+    position: absolute;
+    left: 40%;
+    bottom: 10%;
+    z-index: 3;
+    background: linear-gradient(
+        to left top,
+        rgba(225, 221, 221, .8),
+        gray
+      );
+    .addT-button {
+      opacity: 0;
+      animation: buttonFadeIn 4s forwards 2s;
+      height: 70%;
+      width: 70%;
+      border-radius: 50%;
+      border: 4px solid white;
+      color: white;
+      font-size: 1.5em;
     }
+    .addT-button:hover {
+      transform: scale(1.10);
+    }
+  }
+  .addT-accent-circle-1 {
+    background-image: url('../../assets/images/chuttersnap-f39ab9Rrx0Q-unsplash.jpg');
+    background-size: cover;
+    height: 40em;
+    width: 40em;
+    border-radius: 50%;
+    position: absolute;
+    left: 20px;
+    top: -20px;
+  }
+  .addT-accent-circle-2 {
+    height: 10em;
+    width: 10em;
+    border-radius: 50%;
+    background: linear-gradient(
+      to top right,
+      rgba(247, 138, 50, 0.8),
+      rgba(230, 92, 7, 1)
+    );
+    position: absolute;
+    bottom: 120px;
+    right: 20px;
   }
 }
 @media only screen and (min-width: 768px) {
-  .main-container {
+  .addT-main-container {
     min-height: 80vh;
     border-radius: 1em;
-    .main-content{
+    .addT-main-content{
       .answer {
         border-radius: 1rem;
         filter: drop-shadow(10px 10px 4px rgba(0,0,0,.5));
       }
-      .button-div{
-        button {
-          width: 20%;
-          margin-right: 40%;
-          margin-left: 40%;
-        }
+      .addT-button-div{
+        
       }
     }
   }
@@ -77,4 +121,8 @@
  100% { transform: translateX(125%)}
 }
    
+@keyframes buttonFadeIn {
+  0% {opacity: 0}
+  100% {opacity: 1}
+}
     
