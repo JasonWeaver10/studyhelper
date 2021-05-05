@@ -115,58 +115,60 @@ class AddQuestion extends Component {
 
       return (
         <Layout>
-          <div className="container main-container">
-            <div className="main-content">
-              <div className="topic-select">
+          <div className="addQ-container addQ-main-container">
+            <div className="addQ-main-content">
+              <div className="addQ-topic-select">
                 <h4>What topic is this question for?</h4>
                 <select name="topics" id="topics" onChange={this.handleSelect}>
                   {this.renderSelect()}
                 </select>
               </div>
-              <div className="answer">
+              <div className="addQ-answer">
                 <label htmlFor="question">Question:</label>
                 <textarea type="text-area" id="question" required
                 value={this.state.question}
                 onChange={this.handleChange}/>
               </div>
-              <div className="answer">
+              <div className="addQ-answer">
                 <label htmlFor="correct">Correct Answer:</label>
                 <textarea type="textarea" id="correct" required
                 value={this.state.correct}
                 onChange={this.handleChange}/>
               </div>
-              <div className="answer">
+              <div className="addQ-answer">
                 <label htmlFor="false#1">False Answer:</label>
                 <textarea type="textarea" id="false1" required
                 value={this.state.false1}
                 onChange={this.handleChange}/>
               </div>
-              <div className="answer">
+              <div className="addQ-answer">
               <label htmlFor="false#2">False Answer:</label>
               <textarea type="textarea" id="false2" required
               value={this.state.false2}
               onChange={this.handleChange}/>
               </div>
-              <div className="answer">
+              <div className="addQ-answer">
                 <label htmlFor="false#3">False Answer:</label>
                 <textarea type="textarea" id="false3" required
                 value={this.state.false3}
                 onChange={this.handleChange}/>
               </div>
-              <div className="answer">
+              <div className="addQ-answer">
                 <label htmlFor="hint">Hint:</label>
                 <textarea type="textarea" id="hint" required
                 value={this.state.hint}
                 onChange={this.handleChange}/>
               </div>
             </div> 
-            <div className="side-panel">
-              <div className="top-spacer desktop">
-              </div>
-              <div className="button-div">
-                <button className="btn btn-success" onClick={this.handleSubmit}>Add Question</button>
+            <div className="addQ-side-panel">
+              <div className="addQ-button-div">
+                <button className="btn btn-primary btn-add" onClick={this.handleSubmit}>Add Question</button>
               </div>
             </div> 
+            <div className="addQ-accent-circle">
+            </div>
+            <div className="addQ-accent-circle2">
+            </div>
           </div>
         </Layout>
       )

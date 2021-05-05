@@ -68,7 +68,7 @@
         .welcome-nav {
           margin-top: 7em;
           position: absolute;
-          bottom: -10%;
+          bottom: -20%;
           animation-name: slideUp;
           animation-duration: 2s;
           animation-delay: 4s;
@@ -91,6 +91,6 @@
 
 @keyframes slideUp {
   0% { transform: translateY(0%);}
- 100% { transform: translateY(-240%);}
+ 100% { transform: translateY(-250%);}
 }
 

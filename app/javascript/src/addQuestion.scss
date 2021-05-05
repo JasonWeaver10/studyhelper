@@ -1,13 +1,39 @@
-.main-container {
-  display: flex;
+.addQ-container {
+  overflow-y: visible;
+  position: relative;
+  font-family: 'Itim', cursive;
+}
+.addQ-main-container {
   flex-direction: column;
   min-height: 40vh;
-  .main-content {
+  border-radius: 1em;
+  background: linear-gradient(
+    to right bottom,
+    rgba(40, 158, 218, .7),
+    rgba(40, 158, 218, 1)
+  );
+  overflow-x: hidden;
+  overflow-y: visible;
+  display: flex;
+  .addQ-main-content {
+    overflow-y: visible;
     flex: 3;
-    background-color: rgba(179,207,221,.50);
-    border: 2px solid black;
+    background: linear-gradient(
+      to right bottom,
+      rgba(255,255,255,0.5),
+      rgba(255,255,255,0.3)
+    );
+    z-index: 3;
     margin: 10px;
-    padding: 10px;
+    padding: 1em;
+    animation-name: slideRightAddQ;
+    animation-fill-mode: forwards;
+    animation-duration: 2s;
+    animation-delay: 1s;
+    animation-timing-function: linear;
+    width: 70%;
+    transform: translateX(-115%);
+    filter: drop-shadow(10px 10px 4px rgba(0,0,0,.5));
   }
   .noTopicBack {
     background-image: url('../../assets/images/chuttersnap-f39ab9Rrx0Q-unsplash.jpg');
@@ -18,17 +44,24 @@
       padding: .5em;
     }
   }
-  .topic-select {
+  .addQ-topic-select {
+    margin: 0 auto;
+    display: flex;
+    width: 80%;
     h4 {
-      display: inline-block;
-      margin-right: 20px;
+      flex: 2;
+    }
+    select {
+      flex: 1;
+      border-radius: 1em;
+      padding: .5em 1em;
     }
   }
-  .answer {
+  .addQ-answer {
+    color: rgb(40, 158, 218);
     background-color: white;
     display: flex;
     flex-direction: column;
-    border: 2px solid black;
     padding: 10px;
     margin: 10px;
     textarea {
@@ -36,51 +69,108 @@
       width: 100%;
     }
   }
-  .side-panel {
+  .addQ-side-panel {
+    z-index: 2;
+    margin: 10px;
+    padding: 10px;
     flex: 1;
-    display: flex;
-    flex-direction: column;
-    .desktop {
-      display: none;
-    }
-    .top-spacer {
+    width: 20%;
+    background-color: transparent;
+    border-radius: 1em;
+    .addQ-button-div {
+      position: absolute;
+      width: 15rem;
+      height: 15rem;
+      border-radius: 50%;
+      display: flex;
       padding: 10px;
-      margin-top: 20%;
-      flex: 3;
-      background-image: url("../../assets/images/siora-photography-ZslFOaqzERU-unsplash.jpg");
-      background-size: cover;
-    }
-    .button-div {
-      flex: 1;
-      margin: 0 auto;
-      width: 100%;
-      padding: 10px;
-      button {
-       width: 50%;
-       margin-left: 25%;
-       margin-right: 25%
+      background: linear-gradient(
+        to right bottom,
+        rgba(225, 221, 221, .8),
+        gray
+      );
+      justify-content: center;
+      align-items: center;
+      bottom: 15rem;
+      right: 2rem;
+      .btn-add {
+       opacity: 0;
+       animation: buttonFadeIn 4s forwards 2s;
+       width: 70%;
+       height: 70%;
+       border-radius: 50%;
+       border: 4px solid white;
+      }
+      .btn-add:hover {
+        transform: scale(1.10);
       }
     }
   }
 }
 @media only screen and (min-width: 1000px) {
-  .main-container {
-    min-height: 80vh;
+  .addQ-main-container {
     flex-direction: row;
-    .side-panel {
-      flex-direction: column;
-      .desktop {
-        display: block;
+    border-radius: 1em;
+    padding: 1em;
+    min-height: 80vh;
+    overflow-y: visible;
+    .addQ-main-content {
+      border-radius: 1em;
+      overflow-y: visible;
+      .answer {
+        border-radius: 1em;
       }
-      .top-spacer {
-        display: flex;
-        flex: 3;
-      }
-      .button-div {
-        button {
-          margin-top: 10%;
+      .addQ-side-panel {
+        flex: 1;
+        border-radius: 1em;
+        width: 20%;
+        .top-spacer {
+          background-color: white;
         }
-      }
+        .addQ-button-div {
+          .btn-add {
+            opacity: 0;
+            animation: buttonFadeIn 4s forwards 2s;
+            margin-top: 10%;
+            
+          }
+        }
+    }
+    
     }
   }
+  .addQ-accent-circle {
+    z-index: 1;
+    width: 30rem;
+    height: 30rem;
+    border-radius: 50%;
+    position: absolute;
+    top: -40px;
+    right: 30px;
+    background-image: url("../../assets/images/siora-photography-ZslFOaqzERU-unsplash.jpg");
+    background-size: cover;
+  }
+  .addQ-accent-circle2 {
+    z-index: 1;
+    width: 10rem;
+    height: 10rem;
+    border-radius: 50%;
+    position: absolute;
+    bottom: 140px;
+    right: 180px;
+    background: linear-gradient(
+      to top right,
+      rgba(247, 138, 50, 0.8),
+      rgba(230, 92, 7, 1)
+    );
+  }
 }
+
+@keyframes slideRightAddQ { 
+  100% {transform: translateX(0%)}
+ }
+
+ @keyframes buttonFadeIn {
+   0% {opacity: 0}
+   100% {opacity: 1}
+ }
