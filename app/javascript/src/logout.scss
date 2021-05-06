@@ -1,32 +1,101 @@
-.main-container {
-  background-image: url('../../assets/images/muhammed-jiyadh-_a0_zDprub8-unsplash.jpg');
-  background-size: cover;
-  background-repeat: no-repeat;
+.logout-main-container {
+  font-family: 'Montserrat', sans-serif;
+  border-radius: 1em;
+  background: linear-gradient(
+    to right bottom,
+    rgba(40, 158, 218, .5),
+    rgba(40, 158, 218, 1)
+  );
   margin: 0 auto;
   min-height: 80vh;
-  .main-content{
-    background-color: rgba(179,207,221, .8);
-    border: 2px solid black;
+  .logout-main-content{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    width: 80%;
+    z-index: 2;
+    min-height: 20vh;
+    border-radius: 1em;
+    background: linear-gradient(
+      to left top,
+      rgba(255,255,255,0.5),
+      rgba(255,255,255,0.7)
+    );
+    filter: drop-shadow(10px 10px 4px rgba(0,0,0,.5));
     padding: 10px;
-    text-align: center;
-    .btn {
-      width: 50%;
-      margin-left: 25%;
-      margin-right: 25%;
-      margin-bottom: 2em;
-      margin-top: 2em;
-    }
   }
 }
 @media only screen and (min-width: 768px) {
-  .main-container {
+  .logout-main-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     min-height: 80vh;
-    .main-content {
-      .btn {
-        width: 20%;
-        margin-left: 40%;
-        margin-right: 40%;
+    position: relative;
+    .logout-main-content {
+     z-index: 3;
+     h3 {
+      opacity: 0;
+      animation: logoutFadeIn 2s forwards 1s;
+    }
+    }
+    .logout-btn-div {
+      z-index: 4;
+      height: 15em;
+      width: 15em;
+      border-radius: 50%;
+      background: linear-gradient(
+      to left top,
+      rgba(225, 221, 221, .8),
+      gray
+      );
+      position: absolute;
+      bottom: 10%;
+      left: 40%;
+      display: flex;
+      .logout-btn {
+        opacity: 0;
+        animation: logoutFadeIn 3s forwards 1s;
+        align-self: center;
+        margin: 0 auto;
+        border-radius: 50%;
+        height: 70%;
+        width: 70%;
+        border: 4px solid white;
+      }
+      .logout-btn:hover {
+        transform: scale(1.10);
       }
     }
+    .logout-accent-circle-1 {
+      z-index: 1;
+      height: 30em;
+      width: 30em;
+      border-radius: 50%;
+      background-image: url('../../assets/images/muhammed-jiyadh-_a0_zDprub8-unsplash.jpg');
+      background-size: contain;
+      position: absolute;
+      top: 5%;
+      left: 10%;
+    }
+   .logout-accent-circle-2 {
+    height: 10em;
+    width: 10em;
+    border-radius: 50%;
+    background: linear-gradient(
+      to top right,
+      rgba(247, 138, 50, 0.8),
+      rgba(230, 92, 7, 1)
+    );
+    position: absolute;
+    right: 30%;
+    bottom: 3%;
+    }
+    
   }
+}
+@keyframes logoutFadeIn {
+  0% {opacity: 0}
+  100% {opacity: 1}
 }

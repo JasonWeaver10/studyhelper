@@ -1,15 +1,15 @@
-.main-container {
+.editQ-main-container {
   display: flex;
   flex-direction: column;
   min-height: 40vh;
-  .main-content {
+  .editQ-main-content {
     flex: 3;
     background-color: rgba(179,207,221,.50);
     border: 2px solid black;
     margin: 10px;
     padding: 10px;
   }
-  .topic-select {
+  .editQ-topic-select {
     h4 {
       display: inline-block;
       margin-right: 20px;
@@ -48,9 +48,15 @@
   }
 }
 @media only screen and (min-width: 1000px) {
-  .main-container {
+  .editQ-main-container {
     min-height: 80vh;
     flex-direction: row;
+    border-radius: 1em;
+    background: linear-gradient(
+    to right bottom,
+    rgba(40, 158, 218, .7),
+    rgba(40, 158, 218, 1)
+    );
     .side-panel {
       flex-direction: column;
       .top-spacer {
@@ -60,9 +66,10 @@
         display: flex;
         flex: 3;
       }
-      .button-div {
+      .editQ-button-div {
         button {
           margin-top: 10%;
+          border-radius: 1em;
         }
       }
     }

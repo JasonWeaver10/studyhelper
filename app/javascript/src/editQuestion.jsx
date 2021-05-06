@@ -67,7 +67,7 @@ class EditQuestion extends Component {
   render() {
     return (
       <Layout>
-        <div className="container main-container">
+        <div className="container editQ-main-container">
           <div className="main-content">
             <div className="answer">
               <label htmlFor="question">Question:</label>

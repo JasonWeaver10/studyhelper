@@ -49,11 +49,16 @@ class Logout extends React.Component {
     if (this.state.authenticated == true) {
       return (
         <Layout>
-          <div className="main-container">
-            <div className="main-content">
+          <div className="logout-main-container">
+            <div className="logout-main-content">
               <h3>Are you sure you want to log out?</h3>
-              <button className="btn btn-danger" onClick={this.handleLogout}>Log Out</button>
             </div>
+            <div className="logout-btn-div">
+              <button className="logout-btn btn btn-danger" onClick={this.handleLogout}>Log Out</button>
+            </div>
+            <div className="logout-accent-circle-1"></div>
+            <div className="logout-accent-circle-2"></div>
+            <div className="logout-accent-circle-3"></div>
           </div>
         </Layout>
       )

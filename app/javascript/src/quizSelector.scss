@@ -87,7 +87,7 @@ body {
           margin-bottom: 5%;
           text-align: center;
           font-weight: 700;
-          animation: quizS-FadeIn 3s forwards 1s;
+          animation: quizS-FadeIn 2s forwards 1s;
         }
         select {
           opacity: 0;
@@ -97,14 +97,14 @@ body {
           margin-right: 0;
           border-radius: 1em;
           padding: 1em .5em;
-          animation: quizS-FadeIn 4s forwards 3s;
+          animation: quizS-FadeIn 2s forwards 2s;
         }
         h3 {
           opacity: 0;
           font-weight: 400;
           display: inline;
           margin-left: 20px;
-          animation: quizS-FadeIn 4s forwards 3s;
+          animation: quizS-FadeIn 2s forwards 2s;
         }
         p {
           opacity: 0;
@@ -113,13 +113,13 @@ body {
           margin-left: 40%;
           margin-right: 40%;
           margin-bottom: 5%;
-          animation: quizS-FadeIn 4s forwards 3s;
+          animation: quizS-FadeIn 2s forwards 2s;
         }
         .quizS-radio {
           opacity: 0;
           height: 1.5em;
           width: 1.5em;
-          animation: quizS-FadeIn 4s forwards 3s;
+          animation: quizS-FadeIn 2s forwards 2s;
         }
       }
      
@@ -147,7 +147,7 @@ body {
         height: 70%;
         width: 70%;
         border-radius: 50%;
-        animation: quizS-FadeIn 4s forwards 4s;
+        animation: quizS-FadeIn 2s forwards 2s;
       }
       .quizS-submit:hover {
         transform: scale(1.10);

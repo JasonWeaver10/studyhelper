@@ -60,8 +60,8 @@ class Questions extends React.Component {
       result.push(
         <div className="question-div" key={problem.id}>
           <h4 >{problem.question}</h4>
-          <button className="btn btn-warning" id={problem.id} onClick={this.handleEdit}>Edit Question</button>
-          <button className="btn btn-danger" id={problem.id} onClick={this.handleDelete}>Delete Question</button>
+          <button className="question-list-btn btn btn-warning" id={problem.id} onClick={this.handleEdit}><i class="fas fa-edit"></i></button>
+          <button className="question-list-btn btn btn-danger" id={problem.id} onClick={this.handleDelete}><i class="fas fa-trash"></i></button>
         </div>
       )
     });
@@ -72,14 +72,17 @@ class Questions extends React.Component {
   render(){
     return (
       <Layout>
-        <div className="container main-container">
+        <div className="container question-list-main-container">
           <div className="spacer">
           </div>
-          <div className="main-content">
+          <div className="question-list-main-content">
               {this.renderQuestions()} 
           </div>
           <div className="spacer">
           </div>
+          <div className="question-list-accent-circle-1"></div>
+          <div className="question-list-accent-circle-2"></div>
+          <div className="question-list-accent-circle-3"></div>
         </div>
       </Layout>
     )

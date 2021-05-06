@@ -1,20 +1,31 @@
-.main-container {
+.question-list-main-container {
+  position: relative;
+  font-family: 'Montserrat', sans-serif;
+  background: linear-gradient(
+    to right bottom,
+    rgba(40, 158, 218, .7),
+    rgba(40, 158, 218, 1)
+  );
+  border-radius: 1em;
   display: flex;
   flex-direction: column;
   min-height: 80vh;
   padding: 4%;
-  background-image: url('../../assets/images/nick-fewings-f2Bi-VBs71M-unsplash.jpg');
-  background-size: contain;
-  background-repeat: repeat;
-  .main-content {
+  .question-list-main-content {
+    z-index: 2;
+    border-radius: 1em;
     flex: 4;
-    border: 2px solid black;
     margin: 10px;
-    padding: 10px;
-    background: rgba(179,207,221,.50);
+    padding: 5%;
+    background: linear-gradient(
+      to right bottom,
+      rgba(255,255,255,0.5),
+      rgba(255,255,255,0.3)
+    );
+    filter: drop-shadow(10px 10px 4px rgba(0,0,0,.5));
+
     .question-div {
       background: white;
-      border: 2px solid black;
       margin: 5px;
       padding: 10px;
       display: flex;
@@ -35,7 +46,6 @@
   .answer {
     display: flex;
     flex-direction: row;
-    border: 2px solid black;
     padding: 5px;
     margin: 5px;
     .radio {
@@ -44,26 +54,78 @@
   }
 }
 @media only screen and (min-width: 769px) {
-  .main-container {
+  .question-list-main-container {
+
     flex-direction: row;
-    .main-content {
+    .question-list-main-content {
       .question-div {
         display: block;
         background: white;
-        border: 2px solid black;
-        margin: 5px;
+        margin: 10px auto;
         padding: 10px;
         h4 {
+          opacity: 0;
           margin: 5px;
+          padding: 10px;
+          animation: QuestionButtonsFadeIn 2s forwards;
         }
-        .btn {
+        .question-list-btn {
+          opacity: 0;
           display: inline;
+          border-radius: 50%;
+          height: 3em;
+          width: 3em;
+          margin: 10px;
+          animation: QuestionButtonsFadeIn 2s forwards 1s;
         }
-        .btn-warning {
-          margin-right: 10px;
+        .question-list-btn:hover {
+          transform: scale(1.10);
         }
       }
     }
-    
+    .question-list-accent-circle-1 {
+      background-image: url('../../assets/images/nick-fewings-f2Bi-VBs71M-unsplash.jpg');
+      background-size: contain;
+      height: 30em;
+      width: 30em;
+      border-radius: 50%;
+      position: absolute;
+      top: 1%;
+      right: 2%;
+      z-index: 1;
+    }
+    .question-list-accent-circle-2 {
+      height: 10em;
+      width: 10em;
+      border-radius: 50%;
+      background: linear-gradient(
+      to top right,
+      rgba(247, 138, 50, 0.8),
+      rgba(230, 92, 7, 1)
+      );
+      position: absolute;
+      left: 5%;
+      top: 5%;
+      z-index: 1;
+    }
+    .question-list-accent-circle-3 {
+      height: 20em;
+      width: 20em;
+      border-radius: 50%;
+      background: linear-gradient(
+        to right bottom,
+        rgba(225, 221, 221, .8),
+        gray
+      );
+      position: absolute;
+      left: 3%;
+      top: 30%;
+      z-index: 1;
+    }
   }
+}
+
+@keyframes QuestionButtonsFadeIn {
+  0% {opacity: 0}
+  100% {opacity: 1}
 }
