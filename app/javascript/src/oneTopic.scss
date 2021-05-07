@@ -1,21 +1,127 @@
-.question-div {
-  .h3 {
-    font-size: 1em;
-    text-align: center;
-
+.one-topic-main-container {
+  font-family: 'Montserrat', sans-serif;
+  position: relative;
+  border-radius: 1em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 1em;
+  background: linear-gradient(
+    to right bottom,
+    rgba(40, 158, 218, .7),
+    rgba(40, 158, 218, 1)
+  );
+  .one-topic-main-content {
+    z-index: 2;
+    width: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 30vh;
+    border-radius: 1em;
+    background: linear-gradient(
+      to right bottom,
+      rgba(255,255,255,0.5),
+      rgba(255,255,255,0.3)
+    );
+    filter: drop-shadow(10px 10px 4px rgba(0,0,0,.5));
+    .one-topic-limited {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      h3 {
+        opacity: 0;
+        animation: oneTopicFadeIn 2s forwards 1s;
+        font-weight: 700;
+      }
+    }
+    question-div {
+      .h3 {
+       
+        font-size: 1em;
+        text-align: center;
+    
+      }
+      .h2 {
+        font-size: 1em; 
+      }
+    }  
   }
-  .h2 {
-    font-size: 1em; 
+  .one-topic-accent-circle-1 {
+    z-index: 1;
+    width: 30rem;
+    height: 30rem;
+    border-radius: 50%;
+    position: absolute;
+    top: 3%;
+    right: 1%;
+    background-image: url("../../assets/images/nguyen-dang-hoang-nhu-cbEvoHbJnIE-unsplash.jpg");
+    background-size: cover;
+  }
+  .one-topic-accent-circle-2 {
+    z-index: 1;
+    width: 10rem;
+    height: 10rem;
+    border-radius: 50%;
+    position: absolute;
+    bottom: 15%;
+    right: 22%;
+    background: linear-gradient(
+      to top right,
+      rgba(247, 138, 50, 0.8),
+      rgba(230, 92, 7, 1)
+    );
+  }
+  .one-topic-btn-div {
+    z-index: 3;
+    position: absolute;
+    bottom: 5%;
+    width: 15rem;
+    height: 15rem;
+    border-radius: 50%;
+    display: flex;
+    padding: 10px;
+    background: linear-gradient(
+      to right bottom,
+      rgba(225, 221, 221, .8),
+      gray
+    );
+    justify-content: center;
+    align-items: center;
+    .one-topic-back-btn {
+      opacity: 0;
+      animation: oneTopicFadeIn 2s forwards 2s;
+      width: 70%;
+      height: 70%;
+      border-radius: 50%;
+      border: 4px solid white;
+      font-weight: 600;
+    }
+    .one-topic-back-btn:hover {
+      transform: scale(1.10);
+    }
   }
 }
 
 @media only screen and (min-width: 769px)  {
-  .question-div {
-    .h3 {
-      font-size: 1.5em;
-    }
-    .h2 {
-      font-size: 2em;
+  .one-topic-main-container {
+    min-height: 80vh;
+    .one-topic-main-content {
+      .question-div {
+        .h3 {
+          font-size: 1.5em;
+        }
+        .h2 {
+          font-size: 2em;
+        }
+      }
     }
   }
+  
+}
+
+@keyframes oneTopicFadeIn {
+  0% {opacity: 0}
+  100% {opacity: 1}
 }

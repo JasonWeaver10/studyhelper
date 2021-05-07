@@ -38,6 +38,7 @@
      h3 {
       opacity: 0;
       animation: logoutFadeIn 2s forwards 1s;
+      font-weight: 700;
     }
     }
     .logout-btn-div {
@@ -63,6 +64,7 @@
         height: 70%;
         width: 70%;
         border: 4px solid white;
+        font-weight: 700;
       }
       .logout-btn:hover {
         transform: scale(1.10);

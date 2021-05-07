@@ -89,13 +89,18 @@ class OneTopic extends React.Component {
     } else {
       return (
         <Layout>
-        <div className="main-container">
-          <div className="main-content">
-            <div className="finished">
-              <h3>"This Topic does not have enough questions to test yet!"</h3>
-              <button className="btn btn-warning" onClick={this.handleReset}>Back to Quiz Selection</button>
+        <div className="one-topic-main-container">
+          <div className="one-topic-main-content">
+            <div className="one-topic-limited">
+              <h3>This Topic does not have enough questions to test yet!</h3>
             </div>
           </div>
+          <div className="one-topic-btn-div">
+            <button className="one-topic-back-btn btn btn-warning" onClick={this.handleReset}>Back to Quiz Selection</button>
+          </div>
+          <div className="one-topic-accent-circle-1"></div>
+          <div className="one-topic-accent-circle-2"></div>
+
         </div>
       </Layout>
       )
